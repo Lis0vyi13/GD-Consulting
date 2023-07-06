@@ -1,1 +1,10 @@
-{"version":3,"sources":["../sass/blocks/_header.sass","../sass/style.sass"],"names":[],"mappings":"AAAA,QACI,UAAA,CCIJ,EAGI,sBAAA,CAGJ,WACI,eAAA,CACA,cAAA,CACA,aAAA,CACA,iBAAA","file":"style.min.css"}
+{
+  "version": 3,
+  "sources": [
+    "../sass/base/_fonts.sass",
+    "../sass/style.sass"
+  ],
+  "names": [],
+  "mappings": "AAAQ,sIAAA,CAGR,GACI,0BAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,eAAA,CACA,gBAAA,CAEJ,GACI,0BAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,eAAA,CACA,gBAAA,CAEJ,GACI,0BAAA,CACA,cAAA,CACA,uBAAA,CACA,iBAAA,CACA,eAAA,CACA,gBAAA,CAEJ,QACI,0BAAA,CACA,cAAA,CACA,kBAAA,CACA,iBAAA,CACA,eAAA,CACA,gBAAA,CC7BJ,EAGI,sBAAA,CACJ,KACI,oCAAA,CACA,iBAAA,CAKA,iBACI,kCAAA,CACJ,kBACI,UAAA,CACA,iBAAA,CACA,QAAA,CACA,UAAA,CACA,aAAA,CACA,UAAA,CACA,WAAA,CACA,yBAAA,CACA,0BAAA,CACA,OAAA,CACA,6CAAA,CACR,QACI,uBAAA,CACA,SAAA",
+  "file": "style.min.css"
+}
