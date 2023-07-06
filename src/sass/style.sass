@@ -1,18 +1,16 @@
 @import 'base/mixins'
 @import 'base/variables'
 @import 'base/fonts'
+@import 'blocks/header'
+
 
 *
-
-
+    //default font-size: 16px | font-weight: 400
+    // font-family: 'Museo Sans Cyrl', sans-serif
     scroll-behavior: smooth
-body
-    margin-right: calc(-1 * (100vw - 100%))
-    overflow-x: hidden
+
 
 .container
-
-
     &:hover
         transform: translate3d(0, -10px, 0)
     &::after
@@ -30,3 +28,7 @@ body
 .hidden
     transition: all .8s ease
     opacity: 0
+    max-width: 972px
+    padding: 0 15px
+    margin: 0 auto
+    position: relative
