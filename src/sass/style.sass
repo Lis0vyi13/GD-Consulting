@@ -1,5 +1,6 @@
 @import 'base/mixins'
 @import 'base/variables'
+@import 'base/fonts'
 @import 'blocks/header'
 
 
@@ -10,6 +11,23 @@
 
 
 .container
+    &:hover
+        transform: translate3d(0, -10px, 0)
+    &::after
+        content: ""
+        position: absolute
+        left: 50%
+        z-index: 11
+        display: block
+        width: 25px
+        height: 25px
+        border-top: 4px solid #fff
+        border-left: 4px solid #fff
+        top: 60%
+        transform: translate(-50%, -50%) rotate(45deg)
+.hidden
+    transition: all .8s ease
+    opacity: 0
     max-width: 972px
     padding: 0 15px
     margin: 0 auto
