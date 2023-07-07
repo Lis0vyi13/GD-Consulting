@@ -1,0 +1,172 @@
+.intro {
+  display: flex;
+  gap: 24px;
+  &_button {
+    @include button;
+  }
+  &_service {
+    position: relative;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 48px;
+    padding: 56px;
+    &::after {
+      background: url("../img/main/man.png") no-repeat;
+      content: "";
+      right: -140px;
+      bottom: 0;
+      position: absolute;
+      z-index: 2;
+      width: 848px;
+      height: 620px;
+      display: block;
+    }
+    &__title {
+      max-width: 576px;
+    }
+    &__subtitle {
+      max-width: 330px;
+      margin-bottom: 342px;
+      margin-top: 32px;
+    }
+  }
+
+  &_options {
+    &__trust {
+      position: relative;
+      width: 412px;
+      height: 177px;
+      background-color: #ebf3ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #000;
+      border-radius: 0px 115px 0 0;
+      &::before {
+        content: "";
+        background: url("../icons/Vector9.svg") no-repeat;
+        position: absolute;
+        top: 13px;
+        z-index: 22;
+        right: -13px;
+        width: 36px;
+        display: block;
+        cursor: pointer;
+        height: 36px;
+      }
+
+      &::after {
+        content: "";
+        cursor: pointer;
+        z-index: 1;
+        background-color: #000;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+      }
+    }
+
+    &__clients {
+      position: relative;
+      gap: 40px;
+      height: 177px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 46px;
+      border: 1px solid #000;
+      border-radius: 0px 115px 0 0;
+      &::before {
+        content: "";
+        cursor: pointer;
+        background: url("../icons/Vector8.svg") no-repeat;
+        position: absolute;
+        top: 12px;
+        z-index: 22;
+        right: -13px;
+        width: 36px;
+        display: block;
+        height: 36px;
+      }
+      &::after {
+        content: "";
+        background-color: #000;
+        width: 36px;
+        cursor: pointer;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+      }
+    }
+
+    &__consultations {
+      border-radius: 48px 48px 48px 0px;
+      background: #465976;
+      margin-top: 24px;
+      padding: 56px 48px;
+    }
+  }
+}
+
+.trust_image img {
+  width: 160px;
+  height: 130px;
+}
+.options__text {
+  font-family: EB Garamond;
+  font-size: 22px;
+  max-width: 128px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.44px;
+}
+.clients {
+  &_content {
+    display: flex;
+    gap: 32px;
+    margin-left: 16px;
+  }
+  &_text {
+    font-family: Mulish;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 64px;
+  }
+}
+.consultations {
+  &_text {
+    font-family: EB Garamond;
+    color: #fff;
+    font-size: 44px;
+    margin-bottom: 73px;
+    font-weight: 500;
+    line-height: 56px;
+  }
+  &_button {
+    @include button;
+    background-color: #fff;
+    display: flex;
+    height: 64px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    &:hover {
+      svg path {
+        fill: white; /* Новый цвет заполнения при наведении */
+      }
+    }
+    &_text {
+      text-align: center;
+      font-family: Mulish;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+}

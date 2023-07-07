@@ -1,17 +1,35 @@
 @import "base/mixins";
 @import "base/variables";
 @import "base/fonts";
+@import "blocks/about_us/about_main";
 @import "blocks/header";
+@import "blocks/main/intro";
 
 * {
   //default font-size: 16px | font-weight: 400
   font-family: "Mulish", sans-serif;
   scroll-behavior: smooth;
 }
-
+body,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+}
 .container {
   max-width: 1750px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
