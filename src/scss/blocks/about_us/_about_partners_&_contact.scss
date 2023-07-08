@@ -1,0 +1,45 @@
+.partners-logo {
+  display: grid;
+  padding: 0 48px;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 120px;
+  // .partners-logo_block
+
+  &_block {
+    display: flex;
+    width: 210px;
+    padding: 17px 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid #000;
+  }
+}
+.сonsultations {
+  // .сonsultations_logo
+
+  &_logo {
+  }
+
+  // .сonsultations_button
+
+  &_button {
+  }
+}
+.contact {
+  // .contact_with
+
+  &_with {
+  }
+
+  // .contact_with
+
+  &_with {
+  }
+
+  // .contact_with
+
+  &_with {
+  }
+}

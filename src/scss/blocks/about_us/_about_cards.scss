@@ -1,0 +1,86 @@
+.advantages-cards {
+  display: grid;
+  padding: 0 48px;
+  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 120px;
+
+  // .advantages-cards_UAE
+
+  &_UAE {
+    display: flex;
+    max-width: 732px;
+    padding: 64px 80px;
+    gap: 32px;
+    flex-direction: column;
+    border-radius: 48px;
+    border: 1px solid #000;
+    max-height: 424px;
+  }
+
+  // .advantages-cards_local
+
+  &_local {
+    display: flex;
+    max-width: 732px;
+    padding: 64px 80px;
+    gap: 32px;
+    flex-direction: column;
+    border-radius: 48px;
+    border: 1px solid #000;
+    max-height: 424px;
+  }
+  &_UAE,
+  &_local p {
+    max-width: 628px;
+  }
+  &_UAE h2 {
+    max-width: 371px;
+  }
+  &_local h2 {
+    max-width: 525px;
+  }
+}
+.trust-cards {
+  // .trust-cards_block
+
+  &_block {
+    display: grid;
+    padding: 40px 48px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 120px;
+    gap: 48px;
+    // .trust-cards_title
+  }
+
+  &_title {
+    display: flex;
+    padding: 56px 0px 56px 48px;
+  }
+
+  // .trust-cards_services
+
+  &_services_card {
+    display: flex;
+    max-width: 788px;
+    padding: 64px 80px;
+    border-radius: 48px;
+    border: 2px solid #000;
+    background: #ebf3ff;
+  }
+
+  // .trust-cards_success
+
+  &_success_card {
+    display: flex;
+    max-width: 788px;
+    padding: 64px 80px;
+    border-radius: 48px;
+    border: 2px solid var(--primary, #000);
+    background: #f6f6f6;
+  }
+  &_services_card,
+  &_success_card p {
+    max-width: 628px;
+  }
+}
