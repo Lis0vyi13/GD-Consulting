@@ -21,12 +21,16 @@
     &:first-child {
       position: relative;
       &::before {
+        margin-bottom: 20px;
         content: "";
         display: block;
         height: 1px;
         background-color: #000;
         width: 440px;
       }
+    }
+    &:last-child {
+      padding-bottom: 150px;
     }
     & p {
       font-weight: 900;
@@ -104,7 +108,7 @@
 }
 @include _640 {
   .menu {
-    top: 0;
+    top: 100px;
     left: -15px;
     position: fixed;
     flex-direction: column;
@@ -112,8 +116,8 @@
     background-color: #fff;
     height: 100%;
     width: 500px;
-    padding: 100px 0 0 0px;
     transition: all 0.3s;
+    padding-top: 15px;
     transform: translateX(-100%);
     overflow-y: auto;
     &_link {
@@ -135,12 +139,15 @@
   .header {
     position: unset;
   }
+  .contacts {
+    display: none;
+  }
   .logo {
     position: unset;
   }
   .menu {
     transform: unset;
-    position: relative;
+    position: unset;
     background: none;
     flex-direction: row;
     gap: 40px;
@@ -152,6 +159,7 @@
       font-size: unset;
       padding: unset;
       &:hover {
+        background-color: unset;
         &::after {
           width: 100%;
           transition: 0.3s all;

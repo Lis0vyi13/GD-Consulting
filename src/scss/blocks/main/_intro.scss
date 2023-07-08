@@ -33,31 +33,6 @@
       justify-content: center;
       border: 1px solid #000;
       border-radius: 0px 115px 0 0;
-      &::before {
-        content: "";
-        background: url("../icons/Vector9.svg") no-repeat;
-        position: absolute;
-        top: 13px;
-        z-index: 22;
-        right: -13px;
-        width: 36px;
-        display: block;
-        cursor: pointer;
-        height: 36px;
-      }
-
-      &::after {
-        content: "";
-        cursor: pointer;
-        z-index: 1;
-        background-color: #000;
-        width: 36px;
-        height: 36px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 50%;
-      }
     }
 
     &__clients {
@@ -68,29 +43,6 @@
       justify-content: center;
       border: 1px solid #000;
       border-radius: 0px 115px 0 0;
-      &::before {
-        content: "";
-        cursor: pointer;
-        background: url("../icons/Vector8.svg") no-repeat;
-        position: absolute;
-        top: 12px;
-        z-index: 22;
-        right: -13px;
-        width: 36px;
-        display: block;
-        height: 36px;
-      }
-      &::after {
-        content: "";
-        background-color: #000;
-        width: 36px;
-        cursor: pointer;
-        height: 36px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 50%;
-      }
     }
 
     &__consultations {
@@ -159,6 +111,25 @@
     }
   }
 }
+
+.black-circle {
+  z-index: 1;
+  background-color: #000;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 /////////////////////////////////////////////////////////////////////////
 
 @include _1200 {
