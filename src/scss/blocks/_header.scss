@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
+  align-items: center;
 }
 .menu {
   display: flex;
@@ -22,5 +23,27 @@
       width: 100%;
       transition: 0.3s all;
     }
+  }
+}
+.burger {
+  & span {
+  }
+
+  & span:last-child {
+  }
+}
+
+@include _992 {
+  .menu {
+    display: none;
+  }
+}
+
+@include _1200 {
+  .menu {
+    display: flex;
+  }
+  .burger {
+    display: none;
   }
 }

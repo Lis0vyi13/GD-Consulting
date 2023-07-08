@@ -1,6 +1,10 @@
 .intro {
   display: flex;
+  position: relative;
   gap: 24px;
+  &_img {
+    position: absolute;
+  }
   &_button {
     @include button;
   }
@@ -10,23 +14,12 @@
     background-color: #f6f6f6;
     border-radius: 48px;
     padding: 56px;
-    &::after {
-      background: url("../img/main/man.png") no-repeat;
-      content: "";
-      right: -140px;
-      bottom: 0;
-      position: absolute;
-      z-index: 2;
-      width: 848px;
-      height: 620px;
-      display: block;
-    }
+
     &__title {
       max-width: 576px;
     }
     &__subtitle {
       max-width: 330px;
-      margin-bottom: 342px;
       margin-top: 32px;
     }
   }
@@ -34,8 +27,6 @@
   &_options {
     &__trust {
       position: relative;
-      width: 412px;
-      height: 177px;
       background-color: #ebf3ff;
       display: flex;
       align-items: center;
@@ -72,11 +63,9 @@
     &__clients {
       position: relative;
       gap: 40px;
-      height: 177px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0px 46px;
       border: 1px solid #000;
       border-radius: 0px 115px 0 0;
       &::before {
@@ -108,7 +97,6 @@
       border-radius: 48px 48px 48px 0px;
       background: #465976;
       margin-top: 24px;
-      padding: 56px 48px;
     }
   }
 }
@@ -130,6 +118,7 @@
     display: flex;
     gap: 32px;
     margin-left: 16px;
+    align-items: center;
   }
   &_text {
     font-family: Mulish;
@@ -142,8 +131,6 @@
   &_text {
     font-family: EB Garamond;
     color: #fff;
-    font-size: 44px;
-    margin-bottom: 73px;
     font-weight: 500;
     line-height: 56px;
   }
@@ -167,6 +154,105 @@
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////////
+
+@include _1200 {
+  .intro {
+    height: 665px;
+    &_service {
+      &__subtitle {
+        margin-bottom: 275px;
+      }
+    }
+    &_img {
+      right: 10px;
+      bottom: 0;
+      & img {
+        height: 460px;
+      }
+    }
+    &_options {
+      &__trust {
+        width: 306px;
+        height: 164px;
+      }
+      &__clients {
+        width: 306px;
+        height: 164px;
+      }
+      &__consultations {
+        width: 246px;
+        height: 241px;
+        padding: 30px;
+      }
+    }
+  }
+  .consultations {
+    &_text {
+      font-size: 33px;
+      margin-bottom: 63px;
+    }
+  }
+}
+
+@include _1250 {
+  .intro {
+    &_img {
+      & img {
+        height: 535px;
+      }
+    }
+  }
+}
+@include _1330 {
+  .intro {
+    height: 739px;
+    &_service {
+      &__subtitle {
+        margin-bottom: 342px;
+      }
+    }
+
+    &_img {
+      & img {
+        height: 580px;
+      }
+    }
+    &_options {
+      &__trust {
+        width: 412px;
+        height: 177px;
+      }
+      &__clients {
+        width: 412px;
+        height: 177px;
+      }
+      &__consultations {
+        width: 316px;
+        height: 241px;
+        padding: 56px 48px;
+      }
+    }
+  }
+  .consultations {
+    &_text {
+      font-size: 44px;
+      margin-bottom: 73px;
+    }
+  }
+}
+
+@include _1480 {
+  .intro {
+    &_img {
+      right: 60px;
+      bottom: 0;
+      & img {
+        height: 100%;
+      }
     }
   }
 }
