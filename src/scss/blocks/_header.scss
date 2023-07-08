@@ -1,4 +1,3 @@
-
 .header {
   z-index: 1001;
   background-color: #fff;
@@ -9,181 +8,179 @@
   justify-content: space-between;
   padding: 40px 0;
 
-.menu {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
+  .menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
-  padding: 35px 0 0 35px;
-  &__developer {
-    font-size: 27px;
-    &:first-child {
-      position: relative;
-      &::before {
-        margin-bottom: 20px;
-        content: "";
-        display: block;
-        height: 1px;
-        background-color: #000;
-        width: 440px;
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0 0 35px;
+    &__developer {
+      font-size: 27px;
+      &:first-child {
+        position: relative;
+        &::before {
+          margin-bottom: 20px;
+          content: "";
+          display: block;
+          height: 1px;
+          background-color: #000;
+          width: 440px;
+        }
+      }
+      &:last-child {
+        padding-bottom: 150px;
+      }
+      & p {
+        font-weight: 900;
+        padding: 40px 0 15px 0;
       }
     }
-    &:last-child {
-      padding-bottom: 150px;
+
+    &__tel {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 10px;
     }
-    & p {
-      font-weight: 900;
-      padding: 40px 0 15px 0;
+
+    &__email {
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
   }
 
-  &__tel {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 10px;
+  .burger.active {
+    right: -15px;
+    & span:nth-child(1) {
+      top: 50%;
+      transition: all 0.3s;
+      transform: translate(-50%, 0%) rotate(45deg);
+    }
+    & span:nth-child(2) {
+      display: none;
+    }
+    & span:nth-of-type(3) {
+      top: 50%;
+      transition: all 0.3s;
+      transform: translate(-50%, 0%) rotate(-45deg);
+    }
   }
 
-  &__email {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-}
-
-.burger.active {
-  right: -15px;
-  & span:nth-child(1) {
-    top: 50%;
-    transition: all 0.3s;
-    transform: translate(-50%, 0%) rotate(45deg);
-  }
-  & span:nth-child(2) {
-    display: none;
-  }
-  & span:nth-of-type(3) {
-    top: 50%;
-    transition: all 0.3s;
-    transform: translate(-50%, 0%) rotate(-45deg);
-  }
-
-}
-
-.menu_link {
-  &::after {
-    content: "";
-    display: block;
-    background-color: #000;
-    height: 1px;
-    width: 0%;
-    transition: 0.3s all;
-  }
-
-  &:hover {
+  .menu_link {
     &::after {
-      width: 100%;
+      content: "";
+      display: block;
+      background-color: #000;
+      height: 1px;
+      width: 0%;
       transition: 0.3s all;
     }
-  }
 
-}
-.burger {
-  position: relative;
-  width: 31px;
-  height: 18px;
-  & span {
-    position: absolute;
-    height: 1.3px;
-    width: 100%;
-    background-color: #56606b;
-    &:nth-child(1) {
-      transition: all 0.3s;
-      top: 0;
-    }
-    &:nth-child(2) {
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 50%;
-      transition: all 0.3s;
-    }
-    &:nth-child(3) {
-      bottom: 0;
-      background-color: #56606b;
-      transition: all 0.3s;
-    }
-  }
-}
-@include _640 {
-  .menu {
-    top: 100px;
-    right: 0px;
-    position: fixed;
-    flex-direction: column;
-    z-index: 100;
-    background-color: #fff;
-    height: 100%;
-    width: 500px;
-    transition: all 0.5s;
-    padding-top: 15px;
-    transform: translateX(100%);
-    overflow-y: auto;
-    &_link {
-      font-size: 27px;
-      padding: 35px;
-      transition: all 0.3s;
-      &:hover {
-        background-color: #e9e9e6;
-      }
-    }
-  }
-  .header {
-    position: sticky;
-    top: 0;
-  }
-}
-
-@include _1200 {
-  .header {
-    position: unset;
-  }
-  .contacts {
-    display: none;
-  }
-  .logo {
-    position: unset;
-  }
-  .menu {
-    transform: unset;
-    position: unset;
-    background: none;
-    flex-direction: row;
-    gap: 40px;
-    padding: 0;
-    height: auto;
-    width: auto;
-    overflow: unset;
-    &_link {
-      font-size: unset;
-      padding: unset;
-      &:hover {
-        background-color: unset;
-        &::after {
-          width: 100%;
-          transition: 0.3s all;
-        }
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: 0.3s all;
       }
     }
   }
   .burger {
-    display: none;
+    position: relative;
+    width: 31px;
+    height: 18px;
+    & span {
+      position: absolute;
+      height: 1.3px;
+      width: 100%;
+      background-color: #56606b;
+      &:nth-child(1) {
+        transition: all 0.3s;
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 50%;
+        transition: all 0.3s;
+      }
+      &:nth-child(3) {
+        bottom: 0;
+        background-color: #56606b;
+        transition: all 0.3s;
+      }
+    }
   }
-}
-.active {
-  transform: translateX(0);
+  @include _640 {
+    .menu {
+      top: 100px;
+      right: 0px;
+      position: fixed;
+      flex-direction: column;
+      z-index: 100;
+      background-color: #fff;
+      height: 100%;
+      width: 500px;
+      transition: all 0.5s;
+      padding-top: 15px;
+      transform: translateX(100%);
+      overflow-y: auto;
+      &_link {
+        font-size: 27px;
+        padding: 35px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #e9e9e6;
+        }
+      }
+    }
+    .header {
+      position: sticky;
+      top: 0;
+    }
+  }
 
+  @include _1200 {
+    .header {
+      position: unset;
+    }
+    .contacts {
+      display: none;
+    }
+    .logo {
+      position: unset;
+    }
+    .menu {
+      transform: unset;
+      position: unset;
+      background: none;
+      flex-direction: row;
+      gap: 40px;
+      padding: 0;
+      height: auto;
+      width: auto;
+      overflow: unset;
+      &_link {
+        font-size: unset;
+        padding: unset;
+        &:hover {
+          background-color: unset;
+          &::after {
+            width: 100%;
+            transition: 0.3s all;
+          }
+        }
+      }
+    }
+    .burger {
+      display: none;
+    }
+  }
+  .active {
+    transform: translateX(0);
+  }
 }
