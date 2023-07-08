@@ -9,6 +9,13 @@
 // =_470
 //     @media (min-width:470px)
 //         @content
+
+@mixin _640 {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
 @mixin _768 {
   @media (min-width: 768px) {
     @content;
@@ -27,8 +34,32 @@
   }
 }
 
-@mixin _1400 {
-  @media (min-width: 1400px) {
+@mixin _1250 {
+  @media (min-width: 1250px) {
     @content;
+  }
+}
+@mixin _1330 {
+  @media (min-width: 1330px) {
+    @content;
+  }
+}
+@mixin _1480 {
+  @media (min-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin button {
+  display: inline-block;
+  padding: 17px 57px;
+  background: none;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 32px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #000;
+    color: #fff;
   }
 }
