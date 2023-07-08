@@ -2,16 +2,45 @@
 @import "base/variables";
 @import "base/fonts";
 @import "blocks/header";
+@import "blocks/about_us/about_main";
 
 * {
   //default font-size: 16px | font-weight: 400
   font-family: "Mulish", sans-serif;
   scroll-behavior: smooth;
 }
-
+body,
+button,
+p,
+h1,
+h2,
+h3 a {
+  margin: 0;
+  padding: 0;
+}
 .container {
   max-width: 1750px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.button {
+  display: inline-block;
+  padding: 17px 57px;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 32px;
+}
+
+.button_arrow {
+  padding: 15px 24px 15px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }

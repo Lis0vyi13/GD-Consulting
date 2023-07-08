@@ -1,3 +1,26 @@
-.header {
-  color: #fff;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu_link {
+  &::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    height: 1px;
+    width: 0%;
+    transition: 0.3s all;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+      transition: 0.3s all;
+    }
+  }
 }
