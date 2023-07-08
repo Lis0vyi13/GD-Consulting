@@ -1,3 +1,8 @@
+.header {
+  z-index: 1001;
+  background-color: #fff;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -6,7 +11,23 @@
 }
 .menu {
   display: flex;
-  gap: 40px;
+}
+
+.burger.active {
+  right: -15px;
+  & span:nth-child(1) {
+    top: 50%;
+    transition: all 0.3s;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  & span:nth-child(2) {
+    display: none;
+  }
+  & span:nth-of-type(3) {
+    top: 50%;
+    transition: all 0.3s;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
 }
 
 .menu_link {
@@ -18,32 +39,94 @@
     width: 0%;
     transition: 0.3s all;
   }
-  &:hover {
-    &::after {
-      width: 100%;
-      transition: 0.3s all;
-    }
-  }
 }
 .burger {
+  position: relative;
+  width: 31px;
+  height: 18px;
   & span {
-  }
-
-  & span:last-child {
+    position: absolute;
+    height: 1.3px;
+    width: 100%;
+    background-color: #56606b;
+    &:nth-child(1) {
+      transition: all 0.3s;
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 50%;
+      transition: all 0.3s;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+      background-color: #56606b;
+      transition: all 0.3s;
+    }
   }
 }
 
 @include _992 {
   .menu {
-    display: none;
+    top: 0;
+    left: -15px;
+    position: fixed;
+    flex-direction: column;
+    z-index: 100;
+    background-color: #fff;
+    height: 100%;
+    width: 500px;
+    padding: 100px 0 0 0px;
+    transition: all 0.3s;
+    transform: translateX(-100%);
+    &_link {
+      font-size: 27px;
+      padding: 35px;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #e9e9e6;
+      }
+    }
+  }
+  .header {
+    position: sticky;
+    top: 0;
   }
 }
 
 @include _1200 {
+  .header {
+    position: unset;
+  }
+  .logo {
+    position: unset;
+  }
   .menu {
-    display: flex;
+    transform: unset;
+    position: relative;
+    background: none;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    height: auto;
+    width: auto;
+    &_link {
+      font-size: unset;
+      padding: unset;
+      &:hover {
+        &::after {
+          width: 100%;
+          transition: 0.3s all;
+        }
+      }
+    }
   }
   .burger {
     display: none;
   }
+}
+.active {
+  transform: translateX(0);
 }

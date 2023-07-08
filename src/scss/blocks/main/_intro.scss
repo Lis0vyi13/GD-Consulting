@@ -100,7 +100,9 @@
     }
   }
 }
-
+.logo {
+  z-index: 10000;
+}
 .trust_image img {
   width: 160px;
   height: 130px;
