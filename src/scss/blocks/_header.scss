@@ -1,3 +1,4 @@
+
 .header {
   z-index: 1001;
   background-color: #fff;
@@ -7,10 +8,11 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
-  align-items: center;
-}
+
 .menu {
   display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .contacts {
@@ -68,6 +70,7 @@
     transition: all 0.3s;
     transform: translate(-50%, 0%) rotate(-45deg);
   }
+
 }
 
 .menu_link {
@@ -79,6 +82,14 @@
     width: 0%;
     transition: 0.3s all;
   }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      transition: 0.3s all;
+    }
+  }
+
 }
 .burger {
   position: relative;
@@ -174,4 +185,5 @@
 }
 .active {
   transform: translateX(0);
+
 }

@@ -3,7 +3,11 @@
 @import "base/fonts";
 @import "blocks/about_us/about_main";
 @import "blocks/header";
+@import "blocks/about_us/about_main";
+@import "blocks/about_us/about_cards";
+@import "blocks/about_us/about_partners_&_contact";
 @import "blocks/main/intro";
+
 
 * {
   //default font-size: 16px | font-weight: 400
@@ -33,6 +37,22 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+.button {
+  display: inline-block;
+  padding: 17px 57px;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 32px;
+}
+
+.button_arrow {
+  padding: 15px 24px 15px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  
 ul,
 li {
   list-style: none;

@@ -1,0 +1,84 @@
+.description {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  &_content {
+    margin: 0 auto;
+    max-width: 1026px;
+  }
+  &_subtitle {
+    margin-top: 64px;
+  }
+}
+
+.reliable-company {
+  display: inline-flex;
+  padding: 80px 0px;
+  align-items: center;
+  gap: 24px;
+  // .reliable-company_img
+
+  &_img {
+    display: flex;
+    padding: 50px 93px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .reliable-company_text
+
+  &_text {
+    display: flex;
+    max-width: 736px;
+    padding: 40px 56px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.business-ideas {
+  display: flex;
+  padding: 80px 0px;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+  // .business-ideas_text
+
+  &_text {
+    display: flex;
+    max-width: 736px;
+    padding: 40px 56px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+  }
+  &_text h2 {
+    max-width: 607px;
+  }
+  // .business-ideas_button
+
+  &_button {
+    display: flex;
+    flex-direction: row;
+  }
+  &_button button {
+    max-width: 321 px;
+  }
+  // .business-ideas_img
+
+  &_img {
+    display: flex;
+    padding: 0px 7px 0px 18px;
+    justify-content: center;
+
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 48px 72px 48px 0px;
+  }
+  &_img img {
+    max-width: 100%;
+    height: auto;
+  }
+}
