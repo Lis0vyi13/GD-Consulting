@@ -12,6 +12,7 @@
 .menu {
   display: flex;
 }
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -109,16 +110,16 @@
 @include _640 {
   .menu {
     top: 100px;
-    left: -15px;
+    right: 0px;
     position: fixed;
     flex-direction: column;
     z-index: 100;
     background-color: #fff;
     height: 100%;
     width: 500px;
-    transition: all 0.3s;
+    transition: all 0.5s;
     padding-top: 15px;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     overflow-y: auto;
     &_link {
       font-size: 27px;
