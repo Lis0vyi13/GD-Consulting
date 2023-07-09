@@ -30,3 +30,12 @@ document.addEventListener("click", (e) => {
     });
   }
 });
+function resetElements() {
+  if (window.innerWidth > 1199) {
+    burger.classList.remove("active");
+    menu.classList.remove("active");
+    document.body.classList.remove("lock");
+    blur.classList.remove("show");
+  }
+}
+window.addEventListener("resize", resetElements);
