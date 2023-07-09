@@ -1,5 +1,4 @@
 .header {
-  z-index: 1001;
   background-color: #fff;
 }
 
@@ -7,15 +6,13 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
+  align-items: center;
 
   .menu {
     display: flex;
-    gap: 40px;
-    align-items: center;
   }
 
   .contacts {
-    display: flex;
     flex-direction: column;
     padding: 35px 0 0 35px;
     &__developer {
@@ -80,13 +77,6 @@
       width: 0%;
       transition: 0.3s all;
     }
-
-    &:hover {
-      &::after {
-        width: 100%;
-        transition: 0.3s all;
-      }
-    }
   }
   .burger {
     position: relative;
@@ -115,72 +105,98 @@
       }
     }
   }
-  @include _640 {
-    .menu {
-      top: 100px;
-      right: 0px;
-      position: fixed;
-      flex-direction: column;
-      z-index: 100;
-      background-color: #fff;
-      height: 100%;
-      width: 500px;
-      transition: all 0.5s;
-      padding-top: 15px;
-      transform: translateX(100%);
-      overflow-y: auto;
-      &_link {
-        font-size: 27px;
-        padding: 35px;
-        transition: all 0.3s;
-        &:hover {
-          background-color: #e9e9e6;
-        }
-      }
-    }
-    .header {
-      position: sticky;
-      top: 0;
-    }
-  }
+}
+@include _640 {
+  .menu {
+    top: 100px;
+    right: 0px;
+    position: fixed;
+    flex-direction: column;
+    z-index: 100;
+    background-color: #fff;
+    height: 100%;
+    width: 500px;
+    transition: all 0.5s;
+    padding-top: 15px;
+    transform: translateX(100%);
+    overflow-y: auto;
+    &_link {
+      font-size: 27px;
+      padding: 35px;
+      transition: all 0.3s;
 
-  @include _1200 {
-    .header {
-      position: unset;
+      &:hover {
+        transition: all 0.3s;
+        background-color: #e9e9e6;
+      }
     }
-    .contacts {
-      display: none;
-    }
-    .logo {
-      position: unset;
-    }
-    .menu {
-      transform: unset;
-      position: unset;
-      background: none;
-      flex-direction: row;
-      gap: 40px;
-      padding: 0;
-      height: auto;
-      width: auto;
-      overflow: unset;
-      &_link {
-        font-size: unset;
-        padding: unset;
-        &:hover {
-          background-color: unset;
-          &::after {
-            width: 100%;
-            transition: 0.3s all;
-          }
+  }
+  .header {
+    z-index: 1001;
+    position: sticky;
+    top: 0;
+  }
+  .contacts {
+    display: flex;
+  }
+}
+
+@include _1200 {
+  .header {
+    background-color: #fff;
+  }
+  .contacts {
+    display: none;
+  }
+  .logo {
+    position: unset;
+  }
+  .menu {
+    transform: unset;
+    position: unset;
+    background: none;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    height: auto;
+    width: auto;
+    overflow: unset;
+    &_link {
+      font-size: unset;
+      padding: unset;
+      &:hover {
+        &::after {
+          width: 100%;
+          transition: 0.3s all;
+        }
+      }
+      &:hover {
+        background-color: unset;
+        &::after {
+          width: 100%;
+          transition: 0.3s all;
         }
       }
     }
-    .burger {
-      display: none;
-    }
   }
-  .active {
-    transform: translateX(0);
+  .burger {
+    display: none;
   }
+}
+.active {
+  transform: translateX(0);
+}
+.blur {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+.show {
+  display: block;
 }
