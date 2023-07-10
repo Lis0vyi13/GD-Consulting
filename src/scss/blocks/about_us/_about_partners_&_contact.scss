@@ -17,29 +17,36 @@
   }
 }
 .сonsultations {
+  display: flex;
+  padding-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
   // .сonsultations_logo
 
   &_logo {
+    display: flex;
+    padding: 20px 100px;
   }
 
   // .сonsultations_button
 
   &_button {
-  }
-}
-.contact {
-  // .contact_with
-
-  &_with {
-  }
-
-  // .contact_with
-
-  &_with {
-  }
-
-  // .contact_with
-
-  &_with {
+    @include button;
+    display: flex;
+    max-width: 340px;
+    flex-direction: row;
+    background-color: #000;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      transition: ease 0.3s;
+      svg path {
+        stroke: black;
+        transition: ease 0.3s;
+      }
+    }
   }
 }
