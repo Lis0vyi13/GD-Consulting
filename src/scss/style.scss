@@ -23,16 +23,19 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 .container {
   max-width: 1750px;
-  padding: 0 15px;
   margin: 0 auto;
+  padding: 0 15px;
   position: relative;
 }
+
 a {
   text-decoration: none;
   color: #000;
@@ -56,4 +59,8 @@ a {
 ul,
 li {
   list-style: none;
+}
+
+.lock {
+  overflow: hidden;
 }
