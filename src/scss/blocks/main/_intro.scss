@@ -1,0 +1,232 @@
+.intro {
+  display: flex;
+  position: relative;
+  gap: 24px;
+  &_img {
+    position: absolute;
+  }
+  &_button {
+    @include button;
+  }
+  &_service {
+    position: relative;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 48px;
+    padding: 56px;
+
+    &__title {
+      max-width: 576px;
+    }
+    &__subtitle {
+      max-width: 330px;
+      margin-top: 32px;
+    }
+  }
+
+  &_options {
+    &__trust {
+      position: relative;
+      background-color: #ebf3ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #000;
+      border-radius: 0px 115px 0 0;
+    }
+
+    &__clients {
+      position: relative;
+      gap: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #000;
+      border-radius: 0px 115px 0 0;
+    }
+
+    &__consultations {
+      border-radius: 48px 48px 48px 0px;
+      background: #465976;
+      margin-top: 24px;
+    }
+  }
+}
+.logo {
+  margin-right: 60px;
+  z-index: 10000;
+}
+.trust_image img {
+  width: 160px;
+  height: 130px;
+}
+.options__text {
+  font-family: EB Garamond;
+  font-size: 22px;
+  max-width: 128px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.44px;
+}
+.clients {
+  &_content {
+    display: flex;
+    gap: 32px;
+    margin-left: 16px;
+    align-items: center;
+  }
+  &_text {
+    font-family: Mulish;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 64px;
+  }
+}
+.consultations {
+  &_text {
+    font-family: EB Garamond;
+    color: #fff;
+    font-weight: 500;
+    line-height: 56px;
+  }
+  &_button {
+    @include button;
+    background-color: #fff;
+    display: flex;
+    height: 64px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    &:hover {
+      svg path {
+        fill: white;
+      }
+    }
+    &_text {
+      text-align: center;
+      font-family: Mulish;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+}
+
+.black-circle {
+  z-index: 1;
+  background-color: #000;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+@include _1200 {
+  .intro {
+    height: 665px;
+    &_service {
+      &__subtitle {
+        margin-bottom: 275px;
+      }
+    }
+    &_img {
+      right: 10px;
+      bottom: 0;
+      & img {
+        height: 460px;
+      }
+    }
+    &_options {
+      &__trust {
+        width: 306px;
+        height: 164px;
+      }
+      &__clients {
+        width: 306px;
+        height: 164px;
+      }
+      &__consultations {
+        width: 246px;
+        height: 241px;
+        padding: 30px;
+      }
+    }
+  }
+  .consultations {
+    &_text {
+      font-size: 33px;
+      margin-bottom: 63px;
+    }
+  }
+}
+
+@include _1250 {
+  .intro {
+    &_img {
+      & img {
+        height: 535px;
+      }
+    }
+  }
+}
+@include _1330 {
+  .intro {
+    height: 739px;
+    &_service {
+      &__subtitle {
+        margin-bottom: 342px;
+      }
+    }
+
+    &_img {
+      & img {
+        height: 580px;
+      }
+    }
+    &_options {
+      &__trust {
+        width: 412px;
+        height: 177px;
+      }
+      &__clients {
+        width: 412px;
+        height: 177px;
+      }
+      &__consultations {
+        width: 316px;
+        height: 241px;
+        padding: 56px 48px;
+      }
+    }
+  }
+  .consultations {
+    &_text {
+      font-size: 44px;
+      margin-bottom: 73px;
+    }
+  }
+}
+
+@include _1480 {
+  .intro {
+    &_img {
+      right: 60px;
+      bottom: 0;
+      & img {
+        height: 100%;
+      }
+    }
+  }
+}
