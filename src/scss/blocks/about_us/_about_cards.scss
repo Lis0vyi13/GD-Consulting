@@ -52,7 +52,6 @@
     gap: 48px;
     // .trust-cards_title
   }
-
   &_title {
     display: flex;
     padding: 56px 0px 56px 48px;
@@ -82,5 +81,120 @@
   &_services_card,
   &_success_card p {
     max-width: 628px;
+  }
+}
+/////////////////////////////////////////////////////////////
+@include _640 {
+  .advantages-cards {
+    display: flex;
+    padding: 0 50px;
+    gap: 30px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+
+    // .advantages-cards_UAE
+
+    &_UAE {
+      padding: 40px;
+      gap: 30px;
+      max-width: 800px;
+    }
+
+    // .advantages-cards_local
+
+    &_local {
+      padding: 40px;
+      gap: 30px;
+      max-width: 800px;
+    }
+  }
+}
+
+@include _1200 {
+  .advantages-cards {
+    display: grid;
+    padding: 0 50px;
+    gap: 30px;
+    margin-bottom: 150px;
+
+    // .advantages-cards_UAE
+
+    &_UAE {
+      padding: 40px;
+    }
+
+    // .advantages-cards_local
+
+    &_local {
+      padding: 40px;
+    }
+  }
+  .trust-cards {
+    // .trust-cards_block
+
+    &_block {
+      display: grid;
+      padding: 40px 48px;
+      margin-bottom: 120px;
+      gap: 48px;
+      // .trust-cards_title
+    }
+    &_title {
+      display: flex;
+      padding: 56px 0px 56px 48px;
+    }
+
+    // .trust-cards_services
+
+    &_services_card {
+      display: flex;
+      max-width: 788px;
+      padding: 64px 80px;
+      border-radius: 48px;
+      border: 2px solid #000;
+      background: #ebf3ff;
+    }
+
+    // .trust-cards_success
+
+    &_success_card {
+      display: flex;
+      max-width: 788px;
+      padding: 64px 80px;
+      border-radius: 48px;
+      border: 2px solid var(--primary, #000);
+      background: #f6f6f6;
+    }
+    &_services_card,
+    &_success_card p {
+      max-width: 628px;
+    }
+  }
+}
+@include _1630 {
+  .advantages-cards {
+    padding: 0 48px;
+    gap: 48px;
+    margin-bottom: 120px;
+
+    // .advantages-cards_UAE
+
+    &_UAE {
+      max-width: 732px;
+      padding: 64px 80px;
+      gap: 32px;
+      border-radius: 48px;
+      max-height: 424px;
+    }
+
+    // .advantages-cards_local
+
+    &_local {
+      max-width: 732px;
+      padding: 64px 80px;
+      gap: 32px;
+      border-radius: 48px;
+      max-height: 424px;
+    }
   }
 }

@@ -7,20 +7,52 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <nav class="nav">
           <div class="logo">
-            <a id="logo" href="#"><img src="icons/logo.svg" alt="#" /></a>
+            <a href="#"><img src="icons/logo.svg" alt="#" /></a>
           </div>
-          <div class="menu medium_p_font">
-            <a class="menu_link" target="_blank" href="google.com">
-              Accounting Services
-            </a>
+          <div class="menu medium_subtitle">
+            <a class="menu_link" href="#">Accounting Services</a>
             <a class="menu_link" href="#">Tax Consulting</a>
             <a class="menu_link" href="#">Financial Consulting</a>
             <a class="menu_link" href="#">About Us</a>
             <a class="menu_link" href="#">Contact</a>
+            <div class="contacts">
+              <div class="contacts__developer">
+                <p>Olexandr</p>
+                <div class="contacts__tel">
+                  <img src="icons/main/header/phone.svg" alt="#" /><a href="#"
+                    >+380 68 752 6241</a
+                  >
+                </div>
+                <div class="contacts__email">
+                  <img src="icons/main/header/mail.svg" alt="#" /><a href="#"
+                    >lisovyi13@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="contacts__developer">
+                <p>Yuri</p>
+                <div class="contacts__tel">
+                  <img src="icons/main/header/phone.svg" alt="#" /><a href="#"
+                    >+380 66 091 20 49</a
+                  >
+                </div>
+                <div class="contacts__email">
+                  <img src="icons/main/header/mail.svg" alt="#" /><a href="#"
+                    >ura.poltava@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </nav>
       </div>
@@ -28,6 +60,7 @@
     <div class="container">
       <div class="description">
         <div class="description_content">
+          <img src="icons/about/stars.svg" alt="" />
           <h1>
             A team of experts in taxes, accounting and financial consulting
           </h1>
@@ -65,20 +98,32 @@
           <p class="medium_p_font">
             We offer a full range of professional services, including
             accounting, consulting, tax and audit support, as well as legal
-            advice.We specialize in advising on business creation and corporate
+            advice. We specialize in advising on business creation and corporate
             tax regulations, drawing on a deep understanding of the local market
             and industry insights.
           </p>
 
-          <div class="business-ideas_button">
-            <button class="button button_arrow">
-              <span>
-                <p class="medium_subtitle">Submit your application</p>
-              </span>
-
-              <img src="icons/Arrow.svg" alt="" />
-            </button>
-          </div>
+          <button class="business-ideas_button button_arrow">
+            <span>
+              <p class="medium_subtitle">Submit your application</p>
+            </span>
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Arrow">
+                <path
+                  id="Shape"
+                  d="M4 17H27.5M27.5 17L19 25.5M27.5 17L19 8.5"
+                  stroke="black"
+                  stroke-width="1.5"
+                />
+              </g>
+            </svg>
+          </button>
         </div>
 
         <div class="business-ideas_img">
@@ -129,51 +174,100 @@
         </div>
       </div>
 
-      <div class="partners-logo">
+      <!-- <<div class="partners-logo">
         <div class="partners-logo_block">
-          <img src="icons/Deloitte.png" alt="#" />
+          <img src="icons/about/Deloitte.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/BDO.png" alt="#" />
+          <img src="icons/about/BDO.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/idk.png" alt="#" />
+          <img src="icons/about/idk.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/JVCKENWOOD.png" alt="#" />
+          <img src="icons/about/JVCKENWOOD.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/P&G.png" alt="#" />
+          <img src="icons/about/P&G.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/PRADA.png" alt="#" />
+          <img src="icons/about/PRADA.png" alt="#" />
         </div>
         <div class="partners-logo_block">
-          <img src="icons/TSUSSARDI.png" alt="#" />
+          <img src="icons/about/TSUSSARDI.png" alt="#" />
         </div>
-      </div>
+      </div>> -->
 
       <div class="сonsultations">
         <div class="сonsultations_logo">
-          <img src="icons/сonsultations.svg" alt="#" />
+          <img src="icons/general/сonsultations.svg" alt="#" />
         </div>
-        <div class="сonsultations_button">
-          <button class="">Get free сonsultations</button>
-        </div>
+        <button class="сonsultations_button button_arrow">
+          <p class="medium_subtitle">Get free сonsultations</p>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Arrow">
+              <path
+                id="Shape"
+                d="M4 17H27.5M27.5 17L19 25.5M27.5 17L19 8.5"
+                stroke="white"
+                stroke-width="1.5"
+              />
+            </g>
+          </svg>
+        </button>
       </div>
-      <div class="contact_with_us">
-        <div class="contact_with_us_title">
+      <div class="contact-with-us">
+        <div class="contact-with-us_title">
           <h2>Or you can contact with us</h2>
-          <p class="">
+          <p class="medium_p_font">
             Get a free consultation and find out the cost of services
           </p>
         </div>
-        <div class="contact_with_us_socials">
-          <button><img src="icons/whatsapp.svg" alt="" />Whatsapp</button>
-          <button><img src="icons/telegram.svg" alt="" />Telegram</button>
-          <button><img src="icons/email.svg" alt="" />E-mail</button>
+        <div class="contact-with-us_socials">
+          <a href="ссылка_на_WhatsApp" class="button_whatsapp">
+            <img src="icons/general/whatsapp.svg" alt="#" />
+            <p class="medium_p_font">WhatsApp</p>
+          </a>
+
+          <a href="ссылка_на_Telegram" class="button_telegram">
+            <img src="icons/general/telegram.svg" alt="#" />
+            <p class="medium_p_font">Telegram</p>
+          </a>
+
+          <a href="ссылка_на_Email" class="button_email">
+            <img src="icons/general/email.svg" alt="#" />
+            <p class="medium_p_font">Email</p>
+          </a>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer_content">
+        <!-- <div class="footer_row">
+          <div class="footer_logo">
+            <img src="icons/general/white_logo.svg" alt="" />
+          </div>
+          <ul class="footer_links medium_p_font">
+            <li><a href="#">Accounting Services</a></li>
+            <li><a href="#">Tax Consulting</a></li>
+            <li><a href="#">Financial Consulting</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div> -->
+        <div class="footer_line"><span> </span></div>
+        <div class="footer_bottom medium_p_font">
+          <p>© 2023 G&D Consulting</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="js/burger.js"></script>
 </html>
