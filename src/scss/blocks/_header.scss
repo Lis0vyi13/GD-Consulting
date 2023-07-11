@@ -79,6 +79,8 @@
 .burger {
   position: relative;
   width: 31px;
+  cursor: pointer;
+
   height: 18px;
   & span {
     position: absolute;
@@ -106,7 +108,7 @@
 
 @include _1 {
   .menu {
-    top: 100px;
+    top: 58px;
     right: 0px;
     position: fixed;
     flex-direction: column;
@@ -173,6 +175,7 @@
     }
   }
   .menu {
+    top: 75px;
     &_link {
       font-size: 24px;
     }
@@ -252,6 +255,7 @@
   .menu {
     width: 500px;
     right: 0;
+    top: 86px;
     left: unset;
     flex-direction: column;
 
@@ -289,6 +293,9 @@
 @include _992 {
   .nav {
     padding: 40px 0;
+  }
+  .menu {
+    top: 107px;
   }
 }
 @include _1200 {
