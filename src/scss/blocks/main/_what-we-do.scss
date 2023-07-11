@@ -1,0 +1,110 @@
+.what-we-do {
+  margin-top: 100px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 216px;
+  }
+
+  &__description {
+    text-align: center;
+    display: flex;
+    gap: 40px;
+  }
+}
+@include _1 {
+  .what-we-do {
+    &__content {
+      padding-top: 53px;
+      gap: 30px;
+    }
+    &__title {
+      font-size: 42px;
+      line-height: normal;
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 160%;
+    }
+    &__button {
+      margin-top: 33px;
+      width: 100%;
+    }
+  }
+}
+@include _430 {
+  .what-we-do {
+    &__title {
+      font-size: 51px;
+    }
+    &__description {
+      font-size: 19px;
+    }
+    &__button {
+      margin-top: unset;
+    }
+  }
+}
+
+@include _640 {
+  .what-we-do {
+    &__content {
+      padding-top: 0;
+    }
+    &__title {
+      font-size: 60px;
+      line-height: 160%;
+    }
+    &__description {
+      font-size: 20px;
+    }
+    &__button {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include _900 {
+  .what-we-do {
+    &__content {
+      padding-top: 155px;
+      gap: 72px;
+    }
+    &__title {
+      font-size: 70px;
+    }
+    &__description {
+      font-size: 23px;
+      max-width: 1026px;
+      line-height: 40px;
+    }
+    &__button {
+      width: unset;
+      margin-top: unset;
+    }
+  }
+}
+
+@include _1200 {
+  .what-we-do {
+    &__title {
+      font-size: 80px;
+    }
+    &__description {
+      font-size: 26px;
+    }
+  }
+}
+@include _1330 {
+  .what-we-do {
+    &__content {
+      padding-top: 312px;
+    }
+    &__title {
+      font-size: 120px;
+    }
+  }
+}

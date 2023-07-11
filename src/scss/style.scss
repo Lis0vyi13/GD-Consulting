@@ -8,6 +8,7 @@
 @import "blocks/about_us/about_cards";
 @import "blocks/about_us/about_partners_&_contact";
 @import "blocks/main/intro";
+@import "blocks/main/what-we-do";
 
 * {
   //default font-size: 16px | font-weight: 400
@@ -47,6 +48,15 @@ a {
   background: none;
   border: 1px solid #000;
   border-radius: 32px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .button_arrow {
