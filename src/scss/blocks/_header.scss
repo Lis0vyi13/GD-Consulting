@@ -5,7 +5,6 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
   align-items: center;
 }
 .menu {
@@ -163,6 +162,9 @@
       }
     }
   }
+  .nav {
+    padding: 11px 0;
+  }
 }
 @include _430 {
   .contacts {
@@ -175,8 +177,14 @@
       font-size: 24px;
     }
   }
+  .nav {
+    padding: 17px 0;
+  }
 }
 @include _640 {
+  .nav {
+    padding: 20px 0;
+  }
   .line {
     position: absolute;
     left: 50%;
@@ -231,6 +239,10 @@
   }
 }
 @include _768 {
+  .nav {
+    padding: 30px 0;
+  }
+
   #menu {
     width: unset;
   }
@@ -274,7 +286,11 @@
     }
   }
 }
-
+@include _992 {
+  .nav {
+    padding: 40px 0;
+  }
+}
 @include _1200 {
   .header {
     background-color: #fff;
