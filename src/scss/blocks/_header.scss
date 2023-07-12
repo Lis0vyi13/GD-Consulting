@@ -116,7 +116,6 @@
     background-color: #fff;
     height: 100%;
     transition: all 0.5s;
-    padding-top: 15px;
     width: 100%;
     transform: translateX(150%);
     overflow-y: auto;
@@ -125,7 +124,7 @@
     }
     &_link {
       font-size: 20px;
-      padding: 35px 35px 35px 20px;
+      padding: 20px;
       transition: all 0.3s;
 
       &:hover {
@@ -191,7 +190,7 @@
   .line {
     position: absolute;
     left: 50%;
-    top: 37px;
+    top: 17px;
     z-index: 40000;
     transform: translateX(-50%);
     width: 1px;
@@ -206,14 +205,13 @@
 
     &_link {
       font-size: 20px;
-      padding: 35px 35px 35px 20px;
     }
     &__list {
       position: relative;
     }
   }
   .contacts {
-    padding: 35px 0 0 35px;
+    padding: 15px 0 0 35px;
     position: absolute;
     right: 0;
     padding-right: 15px;
@@ -255,7 +253,7 @@
   .menu {
     width: 500px;
     right: 0;
-    top: 86px;
+    top: 102px;
     left: unset;
     flex-direction: column;
 
@@ -295,7 +293,7 @@
     padding: 40px 0;
   }
   .menu {
-    top: 107px;
+    top: 122px;
   }
 }
 @include _1200 {
