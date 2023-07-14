@@ -1,5 +1,7 @@
 .what-we-do {
   margin-top: 100px;
+  position: relative;
+  padding-bottom: 400px;
 
   &__content {
     display: flex;
@@ -17,6 +19,33 @@
 }
 @include _1 {
   .what-we-do {
+    &__container {
+      &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -40px;
+        left: 30px;
+        background: url("../icons/main/what-we-do/stars.svg") no-repeat;
+        width: 82px;
+        scale: 0.8;
+        height: 80px;
+      }
+    }
+    & .container {
+      &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        bottom: -120px;
+        right: 0px;
+        background: url("../icons/main/what-we-do/paper.svg") no-repeat;
+        width: 655px;
+        height: 450px;
+        scale: 0.4;
+        margin-right: -195px;
+      }
+    }
     &__content {
       padding-top: 53px;
       gap: 30px;
@@ -46,6 +75,21 @@
     &__button {
       margin-top: unset;
     }
+    &__container {
+      &::after {
+        left: unset;
+        scale: 1;
+        right: 0;
+        padding-right: 35px;
+      }
+    }
+    & .container {
+      &::after {
+        scale: 0.6;
+        bottom: -140px;
+        margin-right: -129px;
+      }
+    }
   }
 }
 
@@ -64,11 +108,58 @@
     &__button {
       margin-top: 10px;
     }
+    & .container {
+      &::after {
+        margin-right: -144px;
+        bottom: -160px;
+        width: 720px;
+      }
+    }
+  }
+}
+@include _768 {
+  .what-we-do {
+    & .container {
+      &::after {
+        scale: 0.7;
+        margin-right: -108px;
+      }
+    }
   }
 }
 
-@include _900 {
+@include _992 {
   .what-we-do {
+    &__container {
+      &::after {
+        top: 0px;
+      }
+    }
+    &__container {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -205px;
+        background: url("../icons/main/what-we-do/graph.svg") no-repeat;
+        width: 449px;
+        height: 452px;
+        z-index: -1;
+        scale: 0.8;
+      }
+    }
+    & .container {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -598px;
+        background: url("../icons/main/what-we-do/line.svg") no-repeat;
+        width: 795px;
+        height: 224px;
+        z-index: -1;
+      }
+    }
     &__content {
       padding-top: 155px;
       gap: 72px;
@@ -85,26 +176,117 @@
       width: unset;
       margin-top: unset;
     }
+    & .container {
+      &::after {
+        bottom: 0;
+        scale: 0.8;
+        width: 655px;
+        margin-right: -65px;
+      }
+    }
   }
 }
-
 @include _1200 {
   .what-we-do {
     &__title {
       font-size: 80px;
+      line-height: 130px;
     }
     &__description {
       font-size: 26px;
+    }
+
+    & .container {
+      &::after {
+        width: 655px;
+        bottom: -70px;
+      }
+    }
+    &__container {
+      &::before {
+        left: -152px;
+        scale: 0.8;
+      }
+    }
+    & .container {
+      &::before {
+        left: -418px;
+      }
+    }
+    &__container {
+      &::after {
+        content: "";
+        top: 20px;
+      }
     }
   }
 }
 @include _1330 {
   .what-we-do {
+    & .container {
+      &::after {
+        scale: 1;
+        margin-right: unset;
+        bottom: 0;
+      }
+    }
     &__content {
       padding-top: 312px;
     }
     &__title {
       font-size: 120px;
+    }
+
+    & .container {
+      &::after {
+        scale: 1;
+      }
+    }
+    &__container {
+      &::before {
+        left: -160px;
+        scale: 1;
+      }
+    }
+    & .container {
+      &::before {
+        left: -598px;
+        scale: 1;
+      }
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .what-we-do {
+    & .container {
+      &::after {
+        width: 955px;
+        scale: 0.8;
+
+        right: -100px;
+      }
+    }
+  }
+}
+@include _1980 {
+  .what-we-do {
+    & .container {
+      &::after {
+        width: 955px;
+        scale: 1;
+
+        right: -100px;
+      }
+    }
+  }
+}
+
+@include _2380 {
+  .what-we-do {
+    & .container {
+      &::after {
+        right: -301px;
+      }
     }
   }
 }

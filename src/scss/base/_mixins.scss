@@ -71,6 +71,16 @@
     @content;
   }
 }
+@mixin _1980 {
+  @media (min-width: 1980px) {
+    @content;
+  }
+}
+@mixin _2380 {
+  @media (min-width: 2380px) {
+    @content;
+  }
+}
 
 @mixin button {
   display: inline-block;
