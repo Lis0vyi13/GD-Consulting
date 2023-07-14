@@ -1,0 +1,211 @@
+.what-sets-us-apart {
+  margin-bottom: 195px;
+
+  &__title {
+    font-family: EB Garamond;
+    font-weight: 500;
+  }
+
+  &__cards {
+    display: flex;
+    row-gap: 40px;
+  }
+
+  &__card-name {
+    margin-top: 48px;
+    font-family: EB Garamond;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0.8px;
+  }
+
+  &__card-description {
+    margin-top: 32px;
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+}
+@include _1 {
+  .what-sets-us-apart {
+    margin-top: 87px;
+    &__img {
+      margin-top: 40px;
+    }
+    &__title {
+      font-size: 34px;
+      line-height: normal;
+    }
+    &__cards {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__card-name {
+      font-size: 22px;
+      letter-spacing: 0.44px;
+    }
+
+    &__card-description {
+      font-size: 16px;
+    }
+    &__img {
+      display: flex;
+    }
+    &__button {
+      margin-top: 50px;
+
+      & button {
+        font-size: 17px;
+        width: 100%;
+        &:hover {
+          #arrow path {
+            stroke: white; /* Изменить цвет на белый при наведении */
+          }
+        }
+      }
+
+      & svg {
+        left: 0;
+        position: absolute;
+        top: 50%;
+        left: calc(50% + 95px);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+@include _350 {
+  .what-sets-us-apart {
+    &__button {
+      & button {
+        font-size: 20px;
+      }
+      & svg {
+        left: calc(50% + 110px);
+      }
+    }
+  }
+}
+@include _430 {
+  .what-sets-us-apart {
+    &__title {
+      font-size: 37px;
+    }
+    &__card-description {
+      font-size: 18px;
+    }
+  }
+}
+
+@include _640 {
+  .what-sets-us-apart {
+    margin-top: 167px;
+    &__img {
+      margin-top: unset;
+    }
+    &__card {
+      justify-content: unset;
+      align-items: unset;
+    }
+
+    &__img {
+      justify-content: flex-start;
+    }
+    &__cards {
+      margin-top: 36px;
+      justify-content: space-between;
+    }
+    &__card-name,
+    &__card-description {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 37px;
+    }
+    &__card-description {
+      font-size: 18px;
+      line-height: 160%;
+    }
+  }
+}
+@include _768 {
+  .what-sets-us-apart {
+    &__title {
+      font-size: 54px;
+    }
+    &__card-name {
+      font-size: 31px;
+    }
+  }
+}
+@include _992 {
+  .what-sets-us-apart {
+    &__title {
+      font-size: 62px;
+      line-height: 80px;
+    }
+    &__card-name {
+      font-size: 40px;
+      letter-spacing: 0.8px;
+    }
+    &__card-description {
+      font-size: 22px;
+      line-height: 34px;
+    }
+
+    &__button {
+      margin-top: 139px;
+      & button {
+        width: unset;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .what-sets-us-apart {
+    margin-top: 120px;
+    &__title {
+      font-size: 72px;
+    }
+    &__cards {
+      flex-direction: row;
+      margin-top: 128px;
+    }
+    &__card-name {
+      max-width: 348px;
+    }
+    &__card-description {
+      max-width: 384px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .what-sets-us-apart {
+    &__card-name {
+      max-width: 100%;
+    }
+    &__card-description {
+      max-width: 404px;
+    }
+  }
+}
+@include _1520 {
+  .what-sets-us-apart {
+    &__card-description {
+      max-width: 404px;
+    }
+  }
+}
