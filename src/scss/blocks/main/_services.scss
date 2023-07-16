@@ -23,6 +23,11 @@
     position: relative;
     margin-top: 40px;
     display: inline-flex;
+    &:hover {
+      #arrow path {
+        stroke: white; /* Изменить цвет на белый при наведении */
+      }
+    }
     &-text {
       margin-left: -30px;
     }
