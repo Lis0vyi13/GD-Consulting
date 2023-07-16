@@ -1,6 +1,4 @@
-.what-sets-us-apart {
-  margin-bottom: 195px;
-
+.three-cards-block {
   &__title {
     font-family: EB Garamond;
     font-weight: 500;
@@ -30,9 +28,14 @@
     justify-content: center;
   }
 }
+.arrow-button__text {
+  margin-left: -20px;
+}
 @include _1 {
   .what-sets-us-apart {
     margin-top: 87px;
+  }
+  .three-cards-block {
     &__img {
       margin-top: 40px;
     }
@@ -66,7 +69,7 @@
       margin-top: 50px;
 
       & button {
-        font-size: 17px;
+        font-size: 18px;
         width: 100%;
         &:hover {
           #arrow path {
@@ -79,26 +82,27 @@
         left: 0;
         position: absolute;
         top: 50%;
-        left: calc(50% + 95px);
+        left: calc(50% + 90px);
         transform: translateY(-50%);
       }
     }
   }
 }
 @include _350 {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__button {
       & button {
         font-size: 20px;
       }
       & svg {
-        left: calc(50% + 110px);
+        top: 52%;
+        left: calc(50% + 100px);
       }
     }
   }
 }
 @include _430 {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__title {
       font-size: 37px;
     }
@@ -111,6 +115,8 @@
 @include _640 {
   .what-sets-us-apart {
     margin-top: 167px;
+  }
+  .three-cards-block {
     &__img {
       margin-top: unset;
     }
@@ -141,7 +147,7 @@
   }
 }
 @include _768 {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__title {
       font-size: 54px;
     }
@@ -151,7 +157,7 @@
   }
 }
 @include _992 {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__title {
       font-size: 62px;
       line-height: 80px;
@@ -176,6 +182,8 @@
 @media (min-width: 1200px) {
   .what-sets-us-apart {
     margin-top: 120px;
+  }
+  .three-cards-block {
     &__title {
       font-size: 72px;
     }
@@ -183,27 +191,34 @@
       flex-direction: row;
       margin-top: 128px;
     }
-    &__card-name {
-      max-width: 348px;
-    }
-    &__card-description {
-      max-width: 384px;
+    &__card {
+      padding: 0px 30px;
+
+      &-name {
+        max-width: 348px;
+      }
+      &-description {
+        max-width: 384px;
+      }
     }
   }
 }
 
 @media (min-width: 1400px) {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__card-name {
       max-width: 100%;
     }
     &__card-description {
       max-width: 404px;
     }
+    &__card {
+      padding: unset;
+    }
   }
 }
 @include _1520 {
-  .what-sets-us-apart {
+  .three-cards-block {
     &__card-description {
       max-width: 404px;
     }
