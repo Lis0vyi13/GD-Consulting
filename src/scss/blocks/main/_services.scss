@@ -29,7 +29,7 @@
     display: inline-flex;
     &:hover {
       #arrow path {
-        stroke: white; /* Изменить цвет на белый при наведении */
+        stroke: white;
       }
     }
     &-text {
@@ -50,7 +50,9 @@
 
     &__img {
       display: flex;
+
       flex-basis: 50%;
+
       justify-content: right;
       align-items: center;
       width: 256px;
@@ -73,9 +75,8 @@
       position: absolute;
       left: 0;
       width: 100%;
-      &:first-child {
-        bottom: -93px;
-      }
+      bottom: -93px;
+
       &-text {
         font-size: 18px;
       }
@@ -127,6 +128,11 @@
 
     &__card {
       flex-direction: row;
+      &:nth-child(2) {
+        & .services__option {
+          margin-left: 20px;
+        }
+      }
       &.reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -147,6 +153,11 @@
     &__card {
       &:not(:first-child) {
         margin-top: unset;
+      }
+      &:nth-child(2) {
+        & .services__option {
+          margin-left: 45px;
+        }
       }
     }
     &__cards {
@@ -171,9 +182,12 @@
   .services {
     margin-top: 160px;
     &__card {
+      &:not(:nth-child(2)) {
+        gap: 40px;
+      }
       &:nth-child(2) {
         & .services__option {
-          margin-left: 72px;
+          margin-left: 89px;
         }
       }
     }
@@ -195,6 +209,7 @@
     &__button {
       position: relative;
       width: unset;
+      bottom: 0;
     }
   }
 }
@@ -229,6 +244,9 @@
     &__card {
       // column-gap: 237px;
       row-gap: 105px;
+      &:not(:nth-child(2)) {
+        gap: 136px;
+      }
     }
     &__cards {
       margin-top: 160px;
@@ -236,6 +254,7 @@
     }
     &__img {
       align-items: start;
+      flex-basis: unset;
       & img {
         max-width: unset;
         height: unset;

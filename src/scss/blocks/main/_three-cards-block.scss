@@ -35,6 +35,9 @@
   .what-sets-us-apart {
     margin-top: 87px;
   }
+  .experience {
+    margin-top: 180px;
+  }
   .three-cards-block {
     &__img {
       margin-top: 40px;
@@ -113,7 +116,8 @@
 }
 
 @include _640 {
-  .what-sets-us-apart {
+  .what-sets-us-apart,
+  .experience {
     margin-top: 167px;
   }
   .three-cards-block {
@@ -180,8 +184,12 @@
   }
 }
 @media (min-width: 1200px) {
-  .what-sets-us-apart {
+  .what-sets-us-apart,
+  .experience {
     margin-top: 120px;
+    &__text {
+      max-width: 397px;
+    }
   }
   .three-cards-block {
     &__title {
