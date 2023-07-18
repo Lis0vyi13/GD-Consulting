@@ -1,0 +1,9 @@
+.work-together {
+  margin-top: 260px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
