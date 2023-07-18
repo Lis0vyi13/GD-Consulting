@@ -1,5 +1,5 @@
 .description {
-  margin-top: 100px;
+  margin: 100px 0 150px 0;
   display: flex;
   position: relative;
   justify-content: center;
@@ -8,9 +8,6 @@
   &_content {
     margin: 0 auto;
     max-width: 1026px;
-  }
-  &_subtitle {
-    margin-top: 64px;
   }
 }
 .description img {
@@ -28,19 +25,17 @@
 
   &_img {
     display: flex;
-    padding: 50px 93px;
     justify-content: center;
     align-items: center;
   }
   &_img img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
   // .reliable-company_text
 
   &_text {
     display: flex;
-    max-width: 736px;
     padding: 40px 56px;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +43,9 @@
 }
 
 .business-ideas {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   padding: 80px 0px;
   align-items: center;
   gap: 24px;
@@ -62,27 +59,28 @@
     flex-direction: column;
     justify-content: center;
     gap: 56px;
+    margin: 0 auto;
   }
-  &_text h2 {
-    max-width: 607px;
-  }
+
   // .business-ideas_button
 
   &_button {
-    @include button;
-    display: flex;
-    max-width: 321px;
-    flex-direction: row;
-    background-color: #fff;
-    color: #000;
+    position: relative;
+    margin-top: 40px;
+    display: inline-flex;
     &:hover {
-      background-color: #000;
-      color: #fff;
-      transition: ease 0.3s;
-      svg path {
+      #arrow path {
         stroke: white;
-        transition: ease 0.3s;
       }
+    }
+    &-text {
+      margin-left: -30px;
+    }
+    & svg {
+      top: 52%;
+      left: calc(50% + 55px);
+      transform: translate(-50%, -50%);
+      position: absolute;
     }
   }
 
@@ -92,18 +90,184 @@
     display: flex;
     padding: 0px 7px 0px 18px;
     justify-content: center;
-
-    flex: 1 0 0;
-    align-self: stretch;
-    border-radius: 48px 72px 48px 0px;
   }
   &_img img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    border-radius: 48px 72px 48px 0px;
   }
 }
 
 /////////////////////////////////////////////////////////////////////////
+@include _1 {
+  .description {
+    margin: 100px 0 50px 0;
+    &_content h1 {
+      font-size: 37px;
+      gap: 30px;
+      font-size: 34px;
+      line-height: normal;
+    }
+    &_subtitle {
+      margin-top: 30px;
+    }
+    &_content p {
+      font-size: 20px;
+      line-height: 160%;
+      letter-spacing: 0.4px;
+    }
+  }
+  .description img {
+    width: 52px;
+    top: -17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .reliable-company {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 40px;
+    &_text {
+      gap: 25px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &_img {
+      margin: 0 auto;
+    }
+    &_img img {
+    }
+  }
+  .business-ideas {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 40px;
+    margin: 0 auto;
+    margin-top: 90px;
+    // .business-ideas_text
+
+    &_text {
+      max-width: 100%;
+      gap: 25px;
+      padding: 0;
+    }
+    // .business-ideas_button
+
+    // .business-ideas_img
+
+    &_img {
+      border-radius: 48px 72px 48px 0px;
+    }
+  }
+}
+.description_content p,
+.reliable-company_text p,
+.business-ideas_text p {
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.32px;
+}
+.reliable-company_text h2,
+.business-ideas_text h2 {
+  font-size: 34px;
+  font-style: normal;
+  line-height: normal;
+}
+
+@include _430 {
+  .reliable-company {
+    padding: 0 12px;
+    &_img {
+      padding: 0;
+    }
+  }
+  .description img {
+    width: 81px;
+    top: -19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .reliable-company_text p,
+  .business-ideas_text p {
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0.32px;
+  }
+  .reliable-company_text h2,
+  .business-ideas_text h2 {
+    font-size: 37px;
+    font-style: normal;
+    line-height: normal;
+  }
+}
+@include _640 {
+  .description,
+  .reliable-company,
+  .business-ideas {
+    padding: 15px;
+  }
+  .reliable-company {
+    &_img img {
+    }
+  }
+}
+@include _768 {
+  .description {
+    &_content h1 {
+      font-size: 72px;
+      line-height: 80px;
+    }
+    &_content p {
+      font-size: 26px;
+      line-height: 40px;
+    }
+    &_subtitle {
+      margin-top: 64px;
+    }
+  }
+
+  .description img {
+    width: 81px;
+    top: -10%;
+    transform: translate(400%, -50%);
+  }
+  .reliable-company {
+    grid-template-columns: 1fr;
+    padding: 0 50px;
+    &_text {
+      gap: 30px;
+      margin: 0 auto;
+    }
+    &_img {
+    }
+    &_img img {
+    }
+  }
+}
+@include _992 {
+  .reliable-company {
+    grid-template-columns: 1fr;
+    padding: 100px 50px;
+    &_img {
+      padding: 0;
+      margin: 0 auto;
+    }
+    &_img img {
+    }
+  }
+  .reliable-company_text p,
+  .business-ideas_text p {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  .reliable-company_text h2,
+  .business-ideas_text h2 {
+    font-size: 50px;
+    line-height: 64px;
+  }
+}
 
 @media (min-width: 1200px) and (max-width: 1330px) {
   .business-ideas {
@@ -115,19 +279,27 @@
       align-items: center;
     }
   }
+  .reliable-company {
+    &_img img {
+    }
+  }
 }
 @include _1200 {
+  .description img {
+    width: 81px;
+    top: -10%;
+    transform: translate(600%, -50%);
+  }
   .reliable-company {
-    padding: 100px 0px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
     // .reliable-company_img
 
-    &_img {
-      padding: 0 0 0 35px;
+    &_img img {
     }
     // .reliable-company_text
 
     &_text {
-      display: flex;
       max-width: 736px;
       padding: 0px 30px;
       flex-direction: column;
@@ -137,6 +309,8 @@
   }
 
   .business-ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 80px 0px;
     align-items: center;
     gap: 24px;
@@ -147,6 +321,9 @@
       max-width: 574px;
       gap: 40px;
       padding: 0px 30px;
+    }
+    &_text h2 {
+      max-width: 607px;
     }
     // .business-ideas_button
 
@@ -174,9 +351,6 @@
       display: flex;
       padding: 0;
       justify-content: center;
-
-      flex: 1 0 0;
-      align-self: stretch;
       border-radius: 48px 72px 48px 0px;
     }
   }
@@ -191,8 +365,6 @@
       padding: 50px 93px;
     }
     &_img img {
-      max-width: 100%;
-      height: auto;
     }
     // .reliable-company_text
 
