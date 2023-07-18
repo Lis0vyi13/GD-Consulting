@@ -7,19 +7,7 @@
 
   // .advantages-cards_UAE
 
-  &_UAE {
-    display: flex;
-    max-width: 732px;
-    padding: 64px 80px;
-    gap: 32px;
-    flex-direction: column;
-    border-radius: 48px;
-    border: 1px solid #000;
-    max-height: 424px;
-  }
-
-  // .advantages-cards_local
-
+  &_UAE,
   &_local {
     display: flex;
     max-width: 732px;
@@ -30,6 +18,7 @@
     border: 1px solid #000;
     max-height: 424px;
   }
+
   &_UAE,
   &_local p {
     max-width: 628px;
@@ -59,7 +48,8 @@
 
   // .trust-cards_services
 
-  &_services_card {
+  &_services_card,
+  &_success_card {
     display: flex;
     max-width: 788px;
     padding: 64px 80px;
@@ -71,11 +61,6 @@
   // .trust-cards_success
 
   &_success_card {
-    display: flex;
-    max-width: 788px;
-    padding: 64px 80px;
-    border-radius: 48px;
-    border: 2px solid var(--primary, #000);
     background: #f6f6f6;
   }
   &_services_card,
@@ -84,32 +69,166 @@
   }
 }
 /////////////////////////////////////////////////////////////
-@include _640 {
+@include _1 {
   .advantages-cards {
-    display: flex;
-    padding: 0 50px;
+    padding: 0;
     gap: 30px;
-    margin-bottom: 150px;
-    flex-wrap: wrap;
-
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(0, 1fr);
     // .advantages-cards_UAE
 
-    &_UAE {
-      padding: 40px;
+    &_UAE,
+    &_local {
+      padding: 30px;
       gap: 30px;
-      max-width: 800px;
+      max-width: 100%;
+      border-radius: 28px;
+    }
+    &_UAE h2,
+    &_local h2 {
+      font-size: 34px;
+      line-height: normal;
+    }
+    &_UAE p,
+    &_local p {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+  .trust-cards {
+    // .trust-cards_block
+
+    &_block {
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(0, 1fr);
+      padding: 0px;
+      margin-bottom: 60px;
+      gap: 30px;
+      // .trust-cards_title
+    }
+    &_title {
+      display: flex;
+      padding: 56px 0px 56px 48px;
+    }
+    &_title h2 {
+      font-size: 34px;
+      line-height: normal;
     }
 
-    // .advantages-cards_local
+    // .trust-cards_services
 
-    &_local {
-      padding: 40px;
-      gap: 30px;
-      max-width: 800px;
+    &_services_card,
+    &_success_card {
+      max-width: 788px;
+      padding: 30px;
+      min-height: 100px;
     }
   }
 }
+@include _640 {
+  .advantages-cards {
+    padding: 0 50px;
+    gap: 30px;
 
+    // .advantages-cards_UAE
+
+    &_UAE,
+    &_local {
+      padding: 40px;
+      gap: 30px;
+      max-width: 100%;
+      min-height: 0px;
+    }
+    &_UAE h2,
+    &_local h2 {
+      font-size: 37px;
+      line-height: normal;
+    }
+    &_UAE p,
+    &_local p {
+      font-size: 18px;
+      line-height: 160%;
+    }
+  }
+  .trust-cards {
+    // .trust-cards_block
+
+    &_block {
+      padding: 0px 35px;
+      margin-bottom: 60px;
+      gap: 30px;
+      // .trust-cards_title
+    }
+    &_title {
+      display: flex;
+      padding: 56px 0px 56px 48px;
+    }
+
+    &_title h2 {
+      font-size: 37px;
+      line-height: normal;
+    }
+
+    // .trust-cards_services
+
+    &_services_card,
+    &_success_card {
+      max-width: 788px;
+      padding: 35px;
+      min-height: 100px;
+    }
+  }
+}
+@include _992 {
+  .advantages-cards {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+    gap: 30px;
+    margin-bottom: 150px;
+    &_UAE,
+    &_local {
+      padding: 40px 30px;
+      max-height: 550px;
+    }
+    &_UAE h2,
+    &_local h2 {
+      font-size: 50px;
+      line-height: normal;
+    }
+    &_UAE p,
+    &_local p {
+      font-size: 22px;
+      line-height: 160%;
+    }
+  }
+  .trust-cards {
+    // .trust-cards_block
+
+    &_block {
+      grid-template-columns: 1fr 1fr;
+      padding: 0px 35px;
+      margin-bottom: 60px;
+      gap: 30px;
+      // .trust-cards_title
+    }
+    &_title {
+      display: flex;
+      padding: 56px 0px 56px 48px;
+    }
+    &_title h2 {
+      font-size: 50px;
+      line-height: normal;
+    }
+
+    // .trust-cards_services
+
+    &_services_card,
+    &_success_card {
+      max-width: 788px;
+      padding: 38px;
+    }
+  }
+}
 @include _1200 {
   .advantages-cards {
     display: grid;
@@ -119,12 +238,7 @@
 
     // .advantages-cards_UAE
 
-    &_UAE {
-      padding: 40px;
-    }
-
-    // .advantages-cards_local
-
+    &_UAE,
     &_local {
       padding: 40px;
     }
@@ -133,7 +247,6 @@
     // .trust-cards_block
 
     &_block {
-      display: grid;
       padding: 40px 48px;
       margin-bottom: 120px;
       gap: 48px;
