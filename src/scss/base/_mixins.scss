@@ -60,6 +60,7 @@
     @content;
   }
 }
+
 @mixin _1520 {
   @media (min-width: 1520px) {
     @content;
@@ -67,6 +68,16 @@
 }
 @mixin _1630 {
   @media (min-width: 1630px) {
+    @content;
+  }
+}
+@mixin _1980 {
+  @media (min-width: 1980px) {
+    @content;
+  }
+}
+@mixin _2380 {
+  @media (min-width: 2380px) {
     @content;
   }
 }
@@ -84,6 +95,7 @@
     color: #fff;
   }
 }
+
 @mixin button_social {
   display: flex;
   width: 240px;
