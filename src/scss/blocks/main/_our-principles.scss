@@ -7,9 +7,6 @@
     display: grid;
   }
 
-  &__decor img {
-    width: 100%;
-  }
   &__card {
     display: flex;
     justify-content: space-between;
@@ -80,25 +77,12 @@
       width: 75px;
       height: 54px;
     }
-    &__decor img {
-      margin-top: 30px;
-      scale: 1.6;
-    }
   }
 }
-@include _430 {
-  .our-principles {
-    &__decor img {
-      scale: 1.28;
-    }
-  }
-}
+
 @include _640 {
   .our-principles {
     margin-top: 70px;
-    &__decor img {
-      scale: 1.7;
-    }
   }
 }
 
@@ -116,9 +100,6 @@
       width: 87px;
       height: 62px;
     }
-    &__decor img {
-      scale: 1.6;
-    }
   }
 }
 
@@ -135,10 +116,6 @@
     &__button {
       width: 99px;
       height: 70px;
-    }
-    &__decor img {
-      scale: 1.4;
-      margin-top: 120px;
     }
   }
 }
@@ -191,17 +168,6 @@
   .our-principles {
     & .container {
       overflow: unset;
-    }
-    &__decor img {
-      scale: 1.05;
-    }
-  }
-}
-
-@media (min-width: 2470px) {
-  .our-principles {
-    &__decor img {
-      scale: 1.4;
     }
   }
 }

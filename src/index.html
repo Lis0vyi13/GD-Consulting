@@ -628,14 +628,21 @@
         <div class="our-principles__decor">
           <picture>
             <source
+              draggable="false"
               media="(max-width: 640px)"
               srcset="icons/main/our-principles/Shape(0-640).svg"
             />
             <source
+              draggable="false"
               media="(min-width: 641px) and (max-width: 1920px)"
               srcset="icons/main/our-principles/Shape.svg"
             />
-            <img src="icons/main/our-principles/Full Shape.svg" alt="#" />
+            <img
+              id="fullscreen-decor"
+              draggable="false"
+              src="icons/main/our-principles/Full Shape.svg"
+              alt="#"
+            />
           </picture>
         </div>
       </div>
@@ -672,11 +679,149 @@
       <div class="container">
         <div class="work-together__content">
           <h1 class="three-cards-block__title">Let’s work together!</h1>
-          <div class="work-together__form"></div>
+          <form action="#" class="work-together__form">
+            <div class="work-together__form-inputs">
+              <div class="work-together__form-input">
+                <input
+                  required
+                  name="name"
+                  type="name"
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="work-together__form-input">
+                <input
+                  required
+                  name="email"
+                  type="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <div class="work-together__form-input relative">
+                <input
+                  name="request"
+                  type="button"
+                  value="What is your request?"
+                />
+                <input
+                  required
+                  type="text"
+                  style="opacity: 0; position: absolute; left: 0"
+                  id="hiddenInput"
+                  name="request"
+                />
+
+                <svg
+                  class="request-arrow"
+                  draggable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="12"
+                  viewBox="0 0 22 12"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1L11 11L21 1"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <div class="work-together__form-options hide">
+                  <div class="work-together__form-option">
+                    <a class="medium_p_font">Accounting Services</a>
+                  </div>
+                  <div class="work-together__form-option">
+                    <a class="medium_p_font">Tax Consulting</a>
+                  </div>
+                  <div class="work-together__form-option">
+                    <a class="medium_p_font">Financial Consulting</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="work-together__form-input">
+                <textarea
+                  required
+                  placeholder="Tell more about your request"
+                  name="extra"
+                ></textarea>
+              </div>
+            </div>
+            <input
+              id="requests__submit-button"
+              class="button _black-button"
+              type="submit"
+              value="Send"
+            />
+          </form>
+        </div>
+        <div class="work-together__decor">
+          <picture>
+            <source
+              draggable="false"
+              media="(min-width: 992px) and (max-width: 1920px)"
+              srcset="icons/main/work-together/work-together-large-shape.svg"
+            />
+            <img
+              id="fullscreen-decor"
+              draggable="false"
+              src="icons/main/work-together/work-together-full-shape.svg"
+              alt="#"
+            />
+          </picture>
         </div>
       </div>
     </div>
+    <div class="contact-with-us">
+      <div class="contact-with-us_title">
+        <h2>Or you can contact with us</h2>
+        <p class="medium_p_font">
+          Get a free consultation and find out the cost of services
+        </p>
+      </div>
+      <div class="contact-with-us_socials">
+        <a href="ссылка_на_WhatsApp" class="button_whatsapp">
+          <img src="icons/general/whatsapp.svg" alt="#" />
+          <p class="medium_p_font">WhatsApp</p>
+        </a>
+
+        <a href="ссылка_на_Telegram" class="button_telegram">
+          <img src="icons/general/telegram.svg" alt="#" />
+          <p class="medium_p_font">Telegram</p>
+        </a>
+
+        <a href="ссылка_на_Email" class="button_email">
+          <img src="icons/general/email.svg" alt="#" />
+          <p class="medium_p_font">Email</p>
+        </a>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_content">
+        <!-- <div class="footer_row">
+          <div class="footer_logo">
+            <img src="icons/general/white_logo.svg" alt="" />
+          </div>
+          <ul class="footer_links medium_p_font">
+            <li><a href="#">Accounting Services</a></li>
+            <li><a href="#">Tax Consulting</a></li>
+            <li><a href="#">Financial Consulting</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div> -->
+        <div class="footer_line"><span> </span></div>
+        <div class="footer_bottom medium_p_font">
+          <p>© 2023 G&D Consulting</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
     <div class="blur"></div>
   </body>
   <script src="js/burger.js"></script>
+  <script src="js/form.js"></script>
 </html>
