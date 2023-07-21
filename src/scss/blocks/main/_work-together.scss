@@ -9,28 +9,10 @@
     align-items: center;
   }
   &__form {
-    &-input {
-      &.relative {
-        position: relative;
-        &-options {
-          position: absolute;
-          bottom: -40px;
-          left: 0;
-        }
-      }
-    }
-
-    &-options {
-      display: flex;
-      overflow: hidden;
-      flex-direction: column;
-      border-radius: 30px;
-      max-height: 0px;
-      transition: all 0.3s;
-    }
     &-option {
-      & a {
-        padding: 15px 32px;
+      & a,
+      option {
+        width: 40px;
         cursor: pointer;
         display: block;
         &:hover {
@@ -50,14 +32,13 @@
 
       & input,
       textarea,
-      select,
-      .work-together__form-options {
+      select {
         appearance: none;
         width: 100%;
-        &:not(.work-together__form-options) {
-          padding: 23px 32px;
-          border-radius: 40px;
-        }
+
+        padding: 23px 32px;
+        border-radius: 40px;
+
         border: 1px solid #616161;
         font-family: Mulish;
         font-weight: 500;
@@ -113,8 +94,7 @@
         & input,
         textarea,
         select,
-        .medium_p_font,
-        .work-together__form-options {
+        .medium_p_font {
           font-size: 18px;
           &::placeholder {
             font-size: 18px;
@@ -169,8 +149,7 @@
         & input,
         textarea,
         select,
-        .medium_p_font,
-        .work-together__form-options {
+        .medium_p_font {
           font-size: 22px;
           &::placeholder {
             font-size: 22px;
@@ -234,7 +213,7 @@
   }
 }
 .arrow-animation {
-  transform: rotate(-90deg);
+  transform: scaleY(-1);
   top: 35px;
 }
 .tabs-animation {
@@ -242,4 +221,9 @@
 }
 .overflowYAuto {
   overflow-y: auto;
+}
+option {
+  &[value=""][disabled] {
+    display: none;
+  }
 }
