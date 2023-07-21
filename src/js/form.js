@@ -55,6 +55,6 @@ form.addEventListener("submit", function (e) {
     modal.classList.add("fadeIn");
   }, 10);
   if (modal.classList.contains("_flex")) {
-    body.classList.add("lock");
+    body.style.overflow = "hidden";
   }
 });
