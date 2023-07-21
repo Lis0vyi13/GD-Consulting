@@ -1,20 +1,53 @@
-const requestOptionsBlock = document.querySelector(
-  ".work-together__form-input.relative select"
+const inputRequest = document.querySelector(
+  ".work-together__form-input.relative input"
 );
-
+const requestOptionsBlock = document.querySelector(
+  ".work-together__form-options"
+);
+const tabs = document.querySelectorAll(
+  ".work-together__form-option a.medium_p_font"
+);
+const workTogetherForm = document.querySelector(".work-together__form");
 const requestArrow = document.querySelector(".request-arrow");
+const requestSubmitButton = document.querySelector("#requests__submit-button");
+const hiddenSelect = document.getElementById("hiddenSelect");
 
 function tabsAnimation() {
-  requestArrow.classList.toggle("arrow-animation");
+  setTimeout(() => {
+    requestOptionsBlock.classList.toggle("tabs-animation");
+    requestArrow.classList.toggle("arrow-animation");
+  }, 10);
+
+  if (requestOptionsBlock.style.overflowY === "auto") {
+    requestOptionsBlock.style.overflowY = "hidden";
+  } else {
+    setTimeout(() => {
+      requestOptionsBlock.style.overflowY = "auto";
+    }, 1000);
+  }
+}
+
+function selectTab(tabText) {
+  hiddenSelect.value = tabText;
 }
 
 document.addEventListener("click", function (e) {
   if (e.target.closest(".work-together__form-input.relative")) {
-    tabsAnimation();
-  } else if (
-    requestArrow.classList.contains("arrow-animation") &&
-    !e.target.closest(".work-together__form-input.relative")
-  ) {
-    tabsAnimation();
+    if (!requestOptionsBlock.classList.contains("show")) {
+      tabsAnimation();
+      requestOptionsBlock.classList.toggle("show");
+    } else {
+      tabsAnimation();
+      setTimeout(() => {
+        requestOptionsBlock.classList.toggle("show");
+      }, 200);
+    }
   }
+  tabs.forEach(function (tab) {
+    if (e.target === tab) {
+      inputRequest.value = tab.textContent;
+      inputRequest.style.color = "#000";
+      selectTab(tab.textContent);
+    }
+  });
 });
