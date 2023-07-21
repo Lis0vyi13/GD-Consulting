@@ -34,13 +34,13 @@ function selectTab(tabText) {
 document.addEventListener("click", function (e) {
   if (e.target.closest(".work-together__form-input.relative")) {
     if (!requestOptionsBlock.classList.contains("show")) {
-      tabsAnimation();
       requestOptionsBlock.classList.toggle("show");
+      tabsAnimation();
     } else {
       tabsAnimation();
       setTimeout(() => {
         requestOptionsBlock.classList.toggle("show");
-      }, 200);
+      }, 300);
     }
   }
   tabs.forEach(function (tab) {
