@@ -1,3 +1,5 @@
+import { modal } from "./modal.js";
+
 const inputRequest = document.querySelector(
   ".work-together__form-input.relative input"
 );
@@ -7,24 +9,15 @@ const requestOptionsBlock = document.querySelector(
 const tabs = document.querySelectorAll(
   ".work-together__form-option a.medium_p_font"
 );
-const workTogetherForm = document.querySelector(".work-together__form");
 const requestArrow = document.querySelector(".request-arrow");
-const requestSubmitButton = document.querySelector("#requests__submit-button");
 const hiddenSelect = document.getElementById("hiddenSelect");
+const form = document.querySelector(".work-together__form");
 
 function tabsAnimation() {
   setTimeout(() => {
     requestOptionsBlock.classList.toggle("tabs-animation");
     requestArrow.classList.toggle("arrow-animation");
   }, 10);
-
-  if (requestOptionsBlock.style.overflowY === "auto") {
-    requestOptionsBlock.style.overflowY = "hidden";
-  } else {
-    setTimeout(() => {
-      requestOptionsBlock.style.overflowY = "auto";
-    }, 1000);
-  }
 }
 
 function selectTab(tabText) {
@@ -33,6 +26,9 @@ function selectTab(tabText) {
 
 document.addEventListener("click", function (e) {
   if (e.target.closest(".work-together__form-input.relative")) {
+    if (tabs.length > 3) {
+      requestOptionsBlock.style.overflowY = "scroll";
+    }
     if (!requestOptionsBlock.classList.contains("show")) {
       requestOptionsBlock.classList.toggle("show");
       tabsAnimation();
@@ -50,4 +46,15 @@ document.addEventListener("click", function (e) {
       selectTab(tab.textContent);
     }
   });
+});
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  modal.classList.add("_flex");
+  setTimeout(() => {
+    modal.classList.add("fadeIn");
+  }, 10);
+  if (modal.classList.contains("_flex")) {
+    body.classList.add("lock");
+  }
 });
