@@ -136,8 +136,6 @@
     &_img {
       margin: 0 auto;
     }
-    &_img img {
-    }
   }
   .business-ideas {
     display: flex;
@@ -208,10 +206,6 @@
   .business-ideas {
     padding: 15px;
   }
-  .reliable-company {
-    &_img img {
-    }
-  }
 }
 @include _768 {
   .description {
@@ -240,13 +234,12 @@
       gap: 30px;
       margin: 0 auto;
     }
-    &_img {
-    }
-    &_img img {
-    }
   }
 }
 @include _992 {
+  .description {
+    padding: 0 50px;
+  }
   .reliable-company {
     grid-template-columns: 1fr;
     padding: 100px 50px;
@@ -280,10 +273,6 @@
       align-items: center;
     }
   }
-  .reliable-company {
-    &_img img {
-    }
-  }
 }
 @include _1200 {
   .description img {
@@ -294,10 +283,6 @@
   .reliable-company {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    // .reliable-company_img
-
-    &_img img {
-    }
     // .reliable-company_text
 
     &_text {

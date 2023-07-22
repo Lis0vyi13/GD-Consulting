@@ -67,8 +67,14 @@
       border-radius: 20px;
     }
   }
+  .сonsultations {
+    &_button {
+      width: 100%;
+    }
+  }
 }
-
+@include _640 {
+}
 @include _992 {
   .partners-logo {
     padding: 0 50px;
