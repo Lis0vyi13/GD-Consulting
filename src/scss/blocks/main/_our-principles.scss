@@ -1,0 +1,173 @@
+.our-principles {
+  & .container {
+    overflow: hidden;
+  }
+
+  &__cards {
+    display: grid;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    flex-direction: column;
+    position: relative;
+
+    &:not(:first-child) {
+      border-radius: 48px;
+      border: 2px solid #000;
+    }
+  }
+  &__button {
+    background: #fff;
+    display: inline-flex;
+    border-radius: 64px;
+
+    justify-content: center;
+    align-items: center;
+    border: 0;
+
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      & svg path {
+        stroke: white;
+      }
+    }
+  }
+}
+.light-blue {
+  background: #ebf3ff;
+}
+
+.beige {
+  background: #f6f6f6;
+}
+
+@include _1 {
+  .our-principles {
+    margin-top: 60px;
+
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+    &__star {
+      display: none;
+    }
+
+    &__text {
+      font-family: EB Garamond;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.44px;
+    }
+    &__card {
+      padding: 30px;
+      &:first-child {
+        height: unset;
+        margin-bottom: 36px;
+        padding-left: unset;
+      }
+    }
+    &__button {
+      width: 75px;
+      height: 54px;
+    }
+  }
+}
+
+@include _640 {
+  .our-principles {
+    margin-top: 70px;
+  }
+}
+
+@include _768 {
+  .our-principles {
+    &__card {
+      &:not(:first-child) {
+        min-height: 192px;
+      }
+    }
+    &__text {
+      font-size: 26px;
+    }
+    &__button {
+      width: 87px;
+      height: 62px;
+    }
+  }
+}
+
+@include _992 {
+  .our-principles {
+    &__text {
+      font-size: 29px;
+    }
+    &__card {
+      &:not(:first-child) {
+        min-height: 222px;
+      }
+    }
+    &__button {
+      width: 99px;
+      height: 70px;
+    }
+  }
+}
+
+@include _1200 {
+  .our-principles {
+    margin-top: 215px;
+    &__cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      min-height: 800px;
+    }
+    &__card {
+      padding: 40px;
+      height: unset;
+      &:first-child {
+        padding-left: 40px;
+        margin-bottom: unset;
+      }
+      & h1 {
+        max-width: 412px;
+      }
+    }
+    &__button {
+      width: 112px;
+      height: 80px;
+    }
+    &__star {
+      display: block;
+      margin-left: 48px;
+    }
+    &__text {
+      font-family: Mulish;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 40px;
+    }
+  }
+}
+@include _1520 {
+  .our-principles {
+    &__cards {
+      min-height: 880px;
+    }
+    &__card {
+      padding: 64px 56px 48px 56px;
+    }
+  }
+}
+@media (min-width: 1920px) {
+  .our-principles {
+    & .container {
+      overflow: unset;
+    }
+  }
+}

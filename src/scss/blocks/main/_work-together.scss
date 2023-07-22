@@ -1,0 +1,238 @@
+.work-together {
+  .container {
+    overflow: hidden;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__form {
+    &-input {
+      &.relative {
+        position: relative;
+      }
+    }
+
+    &-options {
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      border-radius: 30px;
+      max-height: 0px;
+      background-color: #fff;
+      transition: all 0.5s;
+      position: absolute;
+      z-index: 1;
+      margin-top: 10px;
+    }
+    &-option {
+      & a {
+        padding: 15px 32px;
+        cursor: pointer;
+        display: block;
+        &:hover {
+          background-color: #f6f6f6;
+        }
+      }
+    }
+
+    &-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      & textarea {
+        resize: none;
+        height: 230px;
+      }
+
+      & input,
+      textarea,
+      select,
+      .work-together__form-options {
+        appearance: none;
+        width: 100%;
+        &:not(.work-together__form-options) {
+          padding: 23px 32px;
+          border-radius: 40px;
+        }
+        border: 1px solid #616161;
+        font-family: Mulish;
+        font-weight: 500;
+        box-sizing: border-box;
+
+        line-height: 34px;
+        &:focus {
+          outline: 3px solid #000;
+        }
+
+        &[name="request"] {
+          position: relative;
+          color: #616161;
+          text-align: left;
+          cursor: pointer;
+        }
+        &::placeholder {
+          color: #616161;
+          font-family: Mulish;
+          font-weight: 400;
+          line-height: 34px;
+        }
+      }
+    }
+    & input[type="submit"] {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}
+.request-arrow {
+  position: absolute;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  top: 41px;
+  pointer-events: none;
+
+  right: 32px;
+  transform: translateY(-50%);
+}
+@include _1 {
+  .work-together {
+    margin-top: 70px;
+    &__decor {
+      display: none;
+    }
+    &__form {
+      margin-top: 40px;
+      width: 100%;
+      &-inputs {
+        width: 100%;
+        & input,
+        textarea,
+        select,
+        .medium_p_font,
+        .work-together__form-options {
+          font-size: 18px;
+          &::placeholder {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include _430 {
+  .work-together .container {
+    &::after {
+      left: unset;
+      scale: 1;
+      right: 0;
+      padding-right: 35px;
+    }
+  }
+}
+
+@include _640 {
+  .work-together {
+    margin-top: 80px;
+  }
+}
+
+@include _768 {
+  .work-together .container {
+    position: relative;
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: -100px;
+      right: 30px;
+      background: url("../icons/main/what-we-do/stars.svg") no-repeat;
+      width: 82px;
+      scale: 0.8;
+      height: 80px;
+    }
+  }
+  .work-together {
+    margin-top: 180px;
+
+    &__form {
+      margin-top: 56px;
+      width: unset;
+      &-inputs {
+        width: 703px;
+        & input,
+        textarea,
+        select,
+        .medium_p_font,
+        .work-together__form-options {
+          font-size: 22px;
+          &::placeholder {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include _992 {
+  .work-together {
+    &__decor {
+      display: block;
+    }
+    &__form {
+      margin-top: 72px;
+    }
+  }
+}
+
+@include _1200 {
+  .work-together .container {
+    &::before {
+      content: "";
+      width: 174px;
+      height: 226px;
+      background: url("../icons/main/work-together/work-together-decor-group.svg")
+        no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      top: -80px;
+      right: 170px;
+    }
+  }
+  .work-together__form {
+    margin-top: 90px;
+  }
+}
+
+@include _1520 {
+  .work-together {
+    margin-top: 260px;
+    &__form {
+      margin-top: 120px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .work-together {
+    & .container {
+      overflow: unset;
+    }
+  }
+}
+.arrow-animation {
+  transform: scaleY(-1);
+  top: 35px;
+}
+.tabs-animation {
+  max-height: 195px;
+}

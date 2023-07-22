@@ -8,11 +8,21 @@
 @import "blocks/about_us/about_cards";
 @import "blocks/about_us/about_partners_&_contact";
 @import "blocks/main/intro";
+@import "blocks/main/what-we-do";
+@import "blocks/main/three-cards-block";
+@import "blocks/main/services";
+@import "blocks/main/our-principles";
+@import "blocks/main/satisfied-clients";
+@import "blocks/main/work-together";
+@import "blocks/main/success";
 
 * {
   //default font-size: 16px | font-weight: 400
   font-family: "Mulish", sans-serif;
   scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
 }
 body,
 button,
@@ -47,6 +57,15 @@ a {
   background: none;
   border: 1px solid #000;
   border-radius: 32px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .button_arrow {
@@ -63,4 +82,83 @@ li {
 
 .lock {
   overflow: hidden;
+}
+input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+.relative {
+  position: relative;
+}
+._black-button {
+  background-color: #000;
+  color: #fff;
+
+  &:hover {
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+._flex {
+  display: flex;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+#fullscreen-decor {
+  width: 100%;
+}
+@include _1 {
+  #fullscreen-decor {
+    margin-top: 30px;
+    scale: 1.6;
+  }
+}
+@include _430 {
+  #fullscreen-decor {
+    scale: 1.28;
+  }
+}
+@include _640 {
+  #fullscreen-decor {
+    scale: 1.7;
+  }
+}
+
+@include _768 {
+  #fullscreen-decor {
+    scale: 1.6;
+  }
+}
+@include _992 {
+  #fullscreen-decor {
+    scale: 1.4;
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #fullscreen-decor {
+    scale: 1.05;
+  }
+}
+
+@media (min-width: 2470px) {
+  #fullscreen-decor {
+    scale: 1.4;
+  }
 }

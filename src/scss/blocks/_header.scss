@@ -5,7 +5,6 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
   align-items: center;
 }
 .menu {
@@ -80,6 +79,8 @@
 .burger {
   position: relative;
   width: 31px;
+  cursor: pointer;
+
   height: 18px;
   & span {
     position: absolute;
@@ -107,7 +108,7 @@
 
 @include _1 {
   .menu {
-    top: 100px;
+    top: 58px;
     right: 0px;
     position: fixed;
     flex-direction: column;
@@ -115,7 +116,6 @@
     background-color: #fff;
     height: 100%;
     transition: all 0.5s;
-    padding-top: 15px;
     width: 100%;
     transform: translateX(150%);
     overflow-y: auto;
@@ -124,7 +124,7 @@
     }
     &_link {
       font-size: 20px;
-      padding: 35px 35px 35px 20px;
+      padding: 20px;
       transition: all 0.3s;
 
       &:hover {
@@ -163,6 +163,9 @@
       }
     }
   }
+  .nav {
+    padding: 11px 0;
+  }
 }
 @include _430 {
   .contacts {
@@ -171,16 +174,23 @@
     }
   }
   .menu {
+    top: 75px;
     &_link {
       font-size: 24px;
     }
   }
+  .nav {
+    padding: 17px 0;
+  }
 }
 @include _640 {
+  .nav {
+    padding: 20px 0;
+  }
   .line {
     position: absolute;
     left: 50%;
-    top: 37px;
+    top: 17px;
     z-index: 40000;
     transform: translateX(-50%);
     width: 1px;
@@ -195,14 +205,13 @@
 
     &_link {
       font-size: 20px;
-      padding: 35px 35px 35px 20px;
     }
     &__list {
       position: relative;
     }
   }
   .contacts {
-    padding: 35px 0 0 35px;
+    padding: 15px 0 0 35px;
     position: absolute;
     right: 0;
     padding-right: 15px;
@@ -231,6 +240,10 @@
   }
 }
 @include _768 {
+  .nav {
+    padding: 30px 0;
+  }
+
   #menu {
     width: unset;
   }
@@ -240,6 +253,7 @@
   .menu {
     width: 500px;
     right: 0;
+    top: 102px;
     left: unset;
     flex-direction: column;
 
@@ -274,7 +288,14 @@
     }
   }
 }
-
+@include _992 {
+  .nav {
+    padding: 40px 0;
+  }
+  .menu {
+    top: 122px;
+  }
+}
 @include _1200 {
   .header {
     background-color: #fff;
