@@ -1,0 +1,20 @@
+.experience {
+  &__button {
+    justify-content: center;
+  }
+}
+
+@include _1 {
+  .experience {
+    &__button {
+      margin-top: 50px;
+    }
+  }
+}
+@include _992 {
+  .experience {
+    &__button {
+      margin-top: 139px;
+    }
+  }
+}
