@@ -1,6 +1,5 @@
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
-const body = document.querySelector("body");
 const menuLinks = document.querySelectorAll(".menu_link");
 const logo = document.querySelector("#logo");
 const blur = document.querySelector(".blur");
@@ -14,15 +13,13 @@ function toggle(elem, selector = "active") {
 function toggleElements() {
   toggle(burger);
   toggle(menu);
-  toggle(body, "lock");
+  toggle(document.body, "lock");
   toggle(blur, "show");
 }
 
 function addStyleToLine() {
   return (line.style.height =
-    window.innerWidth > 638 &&
-    window.innerWidth < 768 &&
-    menu.classList.contains("active")
+    window.innerWidth > 638 && window.innerWidth < 768 && menu.classList.contains("active")
       ? menuList.clientHeight - 25 + "px"
       : "unset");
 }

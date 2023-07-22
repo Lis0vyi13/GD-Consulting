@@ -12,6 +12,7 @@
   display: none;
   opacity: 0;
   transition: all 0.3s;
+
   &__return-button {
     display: flex;
     position: absolute;
@@ -32,6 +33,7 @@
     margin-bottom: 80px;
   }
   & button {
+    transition: all 0.3s;
     margin-top: 80px;
   }
 }
@@ -54,14 +56,72 @@
       padding: unset;
     }
     &__return-button {
-      top: 25px;
-      left: 10px;
+      top: 20px;
+      left: 15px;
       align-items: center;
       gap: 5px;
     }
+
+    & #requests__submit-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s;
+      &:before {
+        transition: all 0.5s;
+        border-radius: 32px;
+        content: "Sended";
+        background: url(../icons/main/check-mark.svg) no-repeat;
+        background-position: 71% 30%;
+        padding-top: 18px;
+        padding-left: -20px;
+        cursor: default;
+        color: #000;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: var(--top-value, 100px);
+        left: 0;
+      }
+    }
   }
 }
-
+@media (min-width: 390px) {
+  .main-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 67% 30%;
+      }
+    }
+  }
+}
+@include _430 {
+  .main-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 65% 30%;
+      }
+    }
+  }
+}
+@media (min-width: 500px) {
+  .main-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 63% 30%;
+      }
+    }
+  }
+}
+@media (min-width: 590px) {
+  .main-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 61% 30%;
+      }
+    }
+  }
+}
 @include _640 {
   .main-success {
     overflow: auto;
@@ -78,7 +138,12 @@
       width: 600px;
     }
     &__return-button {
-      top: 130px;
+      top: 100px;
+    }
+    & #requests__submit-button {
+      &:before {
+        background-position: 61% 30%;
+      }
     }
   }
 }
@@ -86,6 +151,11 @@
   .main-success {
     & button {
       width: 703px;
+    }
+    & #requests__submit-button {
+      &:before {
+        background-position: 59% 30%;
+      }
     }
   }
 }

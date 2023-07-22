@@ -1,14 +1,8 @@
 import { modal } from "./modal.js";
 
-const inputRequest = document.querySelector(
-  ".work-together__form-input.relative input"
-);
-const requestOptionsBlock = document.querySelector(
-  ".work-together__form-options"
-);
-const tabs = document.querySelectorAll(
-  ".work-together__form-option a.medium_p_font"
-);
+const inputRequest = document.querySelector(".work-together__form-input.relative input");
+const requestOptionsBlock = document.querySelector(".work-together__form-options");
+const tabs = document.querySelectorAll(".work-together__form-option a.medium_p_font");
 const requestArrow = document.querySelector(".request-arrow");
 const hiddenSelect = document.getElementById("hiddenSelect");
 const form = document.querySelector(".work-together__form");
@@ -55,6 +49,6 @@ form.addEventListener("submit", function (e) {
     modal.classList.add("fadeIn");
   }, 10);
   if (modal.classList.contains("_flex")) {
-    body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   }
 });
