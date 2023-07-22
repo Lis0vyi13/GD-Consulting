@@ -25,11 +25,11 @@
   &__button {
     display: flex;
     position: relative;
-    justify-content: center;
   }
 }
 .arrow-button__text {
   margin-left: -20px;
+  position: relative;
 }
 @include _1 {
   .what-sets-us-apart {
@@ -69,8 +69,6 @@
       display: flex;
     }
     &__button {
-      margin-top: 50px;
-
       & button {
         font-size: 18px;
         width: 100%;
@@ -85,7 +83,7 @@
         left: 0;
         position: absolute;
         top: 50%;
-        left: calc(50% + 90px);
+        left: calc(50% + 110px);
         transform: translateY(-50%);
       }
     }
@@ -99,7 +97,6 @@
       }
       & svg {
         top: 52%;
-        left: calc(50% + 100px);
       }
     }
   }
@@ -176,7 +173,6 @@
     }
 
     &__button {
-      margin-top: 139px;
       & button {
         width: unset;
       }
