@@ -4,6 +4,7 @@
   gap: 24px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(0, 1fr);
+
   margin-bottom: 120px;
   // .partners-logo_block
 
@@ -55,7 +56,7 @@
 
 @include _1 {
   .partners-logo {
-    padding: 0 48px;
+    padding: 0;
     gap: 24px;
     grid-template-columns: 1fr;
     margin-bottom: 120px;
@@ -64,6 +65,26 @@
     &_block {
       padding: 17px 0;
       border-radius: 20px;
+    }
+  }
+}
+
+@include _992 {
+  .partners-logo {
+    padding: 0 50px;
+  }
+}
+@include _1200 {
+  .partners-logo {
+    padding: 0 48px;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    &_block {
+      padding: 10px 9px;
+    }
+    &_block img {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
