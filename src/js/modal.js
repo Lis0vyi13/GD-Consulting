@@ -18,9 +18,12 @@ modal.addEventListener("click", function (e) {
 modalSendButton.addEventListener("click", function () {
   if (modalSendButton.classList.contains("_black-button")) {
     modalSendButton.style.setProperty("--top-value", "0px");
+    modalSendButton.disabled = true;
     modalSendButton.classList.remove("_black-button");
     setTimeout(() => {
       modalSendButton.style.setProperty("--top-value", "100px");
+      modalSendButton.disabled = false;
+
       modalSendButton.classList.add("_black-button");
     }, 10000);
   }
