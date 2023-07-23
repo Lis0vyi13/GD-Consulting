@@ -5,6 +5,7 @@ const logo = document.querySelector("#logo");
 const blur = document.querySelector(".blur");
 const line = document.querySelector(".line");
 const menuList = document.querySelector(".menu__list");
+const satisfiedClientsBlock = document.getElementById("satisfied-clients");
 
 function toggle(elem, selector = "active") {
   elem.classList.toggle(selector);

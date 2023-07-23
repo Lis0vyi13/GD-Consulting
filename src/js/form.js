@@ -1,8 +1,7 @@
-import { modal } from "./modal.js";
-
+const modalSuccess = document.querySelector(".modal-success");
 const inputRequest = document.querySelector(".work-together__form-input.relative input");
 const requestOptionsBlock = document.querySelector(".work-together__form-options");
-const tabs = document.querySelectorAll(".work-together__form-option a.medium_p_font");
+const tabs = document.querySelectorAll("#modal-success__tab");
 const requestArrow = document.querySelector(".request-arrow");
 const hiddenSelect = document.getElementById("hiddenSelect");
 const form = document.querySelector(".work-together__form");
@@ -44,11 +43,13 @@ document.addEventListener("click", function (e) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  modal.classList.add("_flex");
+  modalSuccess.classList.add("_flex");
   setTimeout(() => {
-    modal.classList.add("fadeIn");
+    modalSuccess.classList.add("fadeIn");
   }, 10);
-  if (modal.classList.contains("_flex")) {
+  if (modalSuccess.classList.contains("_flex")) {
     document.body.style.overflow = "hidden";
   }
 });
+
+export { modalSuccess };
