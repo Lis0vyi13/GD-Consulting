@@ -5,6 +5,7 @@ const tabs = document.querySelectorAll("#modal-success__tab");
 const requestArrow = document.querySelector(".request-arrow");
 const hiddenSelect = document.getElementById("hiddenSelect");
 const form = document.querySelector(".work-together__form");
+const loader = document.querySelector(".lds-dual-ring");
 
 function tabsAnimation() {
   setTimeout(() => {
@@ -43,13 +44,34 @@ document.addEventListener("click", function (e) {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  modalSuccess.classList.add("_flex");
-  setTimeout(() => {
-    modalSuccess.classList.add("fadeIn");
-  }, 10);
-  if (modalSuccess.classList.contains("_flex")) {
-    document.body.style.overflow = "hidden";
-  }
+  const promise1 = new Promise((resolve, reject) => {
+    loader.classList.add("show");
+    document.querySelector("body").style.overflow = "hidden";
+
+    setTimeout(() => {
+      resolve(() => {
+        loader.classList.add("fadeIn");
+      });
+    }, 10);
+  });
+
+  promise1.then(() => {
+    setTimeout(() => {
+      loader.classList.add("hide");
+      loader.classList.remove("show");
+      modalSuccess.classList.add("_flex");
+      document.querySelector("body").style.overflow = "auto";
+      setTimeout(() => {
+        modalSuccess.classList.add("fadeIn");
+        form.reset();
+        inputRequest.style = "";
+        inputRequest.value = "What is your request?";
+      }, 100);
+      if (modalSuccess.classList.contains("_flex")) {
+        document.body.style.overflow = "hidden";
+      }
+    }, 1000);
+  });
 });
 
-export { modalSuccess };
+export { modalSuccess, loader };

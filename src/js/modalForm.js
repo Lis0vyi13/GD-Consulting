@@ -1,4 +1,4 @@
-import { modalSuccess } from "./form.js";
+import { modalSuccess, loader } from "./form.js";
 import { toBlackButton } from "./modals.js";
 const toFormButtons = document.querySelectorAll("#toForm");
 const modalFormBlock = document.querySelector(".modal-form__block");
@@ -22,19 +22,41 @@ function selectTab(tabText) {
 
 modalFormBlock.addEventListener("click", function (e) {
   modalForm.addEventListener("submit", function (e) {
-    modalFormBlock.classList.remove("_flex");
-    modalFormBlock.classList.remove("fadeIn");
-    modalFormBlock.classList.add("hide");
-    toBlackButton();
-
     e.preventDefault();
-    modalSuccess.classList.add("_flex");
-    setTimeout(() => {
-      modalSuccess.classList.add("fadeIn");
-    }, 10);
-    if (modalSuccess.classList.contains("_flex")) {
-      document.body.style.overflow = "hidden";
-    }
+    const promise1 = new Promise((resolve, reject) => {
+      loader.classList.add("show");
+      document.querySelector("body").style.overflow = "hidden";
+
+      setTimeout(() => {
+        resolve(() => {
+          loader.classList.add("fadeIn");
+        });
+      }, 10);
+    });
+
+    promise1.then(() => {
+      setTimeout(() => {
+        modalForm.reset();
+
+        loader.classList.add("hide");
+        loader.classList.remove("show");
+        modalFormBlock.classList.remove("_flex");
+        modalFormBlock.classList.remove("fadeIn");
+        modalFormBlock.classList.add("hide");
+        toBlackButton();
+        document.querySelector("body").style.overflow = "auto";
+        modalSuccess.classList.add("_flex");
+
+        setTimeout(() => {
+          modalSuccess.classList.add("fadeIn");
+          modalFormInput.style = "";
+          modalFormInput.value = "What is your request?";
+        }, 100);
+        if (modalSuccess.classList.contains("_flex")) {
+          document.body.style.overflow = "hidden";
+        }
+      }, 1000);
+    });
   });
 });
 
