@@ -3,7 +3,6 @@
   padding: 56px;
   flex-direction: column;
   align-items: center;
-
   &_title {
     display: flex;
     padding: 56px;
@@ -15,7 +14,6 @@
   &_socials {
     display: inline-flex;
     justify-content: center;
-    padding-top: 30px;
     align-items: center;
     gap: 32px;
   }
@@ -89,9 +87,12 @@
 //////////////////////////////////////////////////////////////
 @include _1 {
   .contact-with-us {
-    padding: 0px;
+    gap: 40px;
+    padding: 15px;
     margin-bottom: 90px;
-
+    & p {
+      text-align: center;
+    }
     &_title {
       display: flex;
       padding: 0;
@@ -113,7 +114,6 @@
     &_socials {
       display: flex;
       flex-direction: column;
-      padding-top: 30px;
       align-items: center;
       gap: 32px;
       width: 100%;
@@ -121,6 +121,10 @@
     &_socials a {
       padding: 22px 0;
       width: 100%;
+    }
+    & p.large_subtitle {
+      font-size: 18px;
+      max-width: 813px;
     }
   }
   .footer {
@@ -157,7 +161,6 @@
 
 @include _430 {
   .contact-with-us {
-    padding: 5px;
     &_title p {
       font-size: 18px;
       letter-spacing: 0.326px;
@@ -168,6 +171,8 @@
 @include _768 {
   .contact-with-us {
     padding: 35px;
+    gap: 55px;
+
     &_title h2 {
       font-size: 50px;
       line-height: 80px;
@@ -182,6 +187,9 @@
 
     &_socials a {
       max-width: 240px;
+    }
+    & p.large_subtitle {
+      font-size: 22px;
     }
   }
 }
@@ -216,8 +224,17 @@
       line-height: 28px;
     }
   }
+  .contact-with-us {
+    & p.large_subtitle {
+      font-size: 26px;
+    }
+  }
 }
+
 @include _1330 {
+  .contact-with-us {
+    gap: 85px;
+  }
   .footer {
     &_content {
       padding: 60px 50px;

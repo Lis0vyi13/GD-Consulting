@@ -42,7 +42,7 @@
   }
 }
 .logo {
-  margin-right: 60px;
+  margin-right: 20px;
   z-index: 10000;
 }
 .trust_image img {
@@ -127,6 +127,9 @@
 /////////////////////////////////////////////////////////////////////////
 
 @include _1 {
+  #intro_container {
+    padding: 0;
+  }
   #logo {
     width: 159px;
   }
@@ -139,7 +142,7 @@
       padding: 0;
     }
     &_button {
-      padding: 17px 94px;
+      padding: 17px 80px;
       margin-bottom: 35px;
       & p {
         font-size: 18px;
@@ -154,9 +157,6 @@
     }
 
     &_service {
-      width: calc(100% + 30px);
-      margin-left: -15px;
-      margin-right: -15px;
       &__content {
         display: flex;
         flex-direction: column;
@@ -179,6 +179,8 @@
       }
     }
     &_options {
+      padding: 0 15px;
+
       display: flex;
       flex-direction: column;
 
@@ -226,7 +228,7 @@
 }
 @include _430 {
   #logo {
-    width: 255px;
+    width: 214px;
   }
   .clients {
     &_content {
@@ -301,6 +303,9 @@
   }
 }
 @include _1200 {
+  #intro_container {
+    padding: 0 50px;
+  }
   .intro {
     height: 665px;
     flex-direction: row;
@@ -308,9 +313,7 @@
       padding: 17px 57px;
       margin-bottom: unset;
     }
-    &_container {
-      padding: 0 15px;
-    }
+
     &_img {
       left: unset;
       position: absolute;
@@ -347,6 +350,8 @@
     }
 
     &_options {
+      padding: unset;
+
       &__trust {
         width: 306px;
         height: 164px;
@@ -385,7 +390,7 @@
   }
 }
 
-@include _1250 {
+@media (min-width: 1305px) {
   .intro {
     &_img {
       & img {
@@ -394,6 +399,7 @@
     }
   }
 }
+
 @include _1330 {
   .intro {
     height: 739px;
@@ -403,11 +409,6 @@
       }
     }
 
-    &_img {
-      & img {
-        height: 555px;
-      }
-    }
     &_options {
       &__trust {
         width: 412px;
@@ -435,9 +436,25 @@
       margin-bottom: 73px;
     }
   }
+  #logo {
+    width: 275px;
+  }
 }
-
+@media (min-width: 1405px) {
+  .intro {
+    &_img {
+      & img {
+        height: 555px;
+      }
+    }
+  }
+}
 @include _1520 {
+  #intro_container {
+    padding: 0 100px;
+  }
+}
+@media (min-width: 1705px) {
   .intro {
     &_img {
       right: 60px;
