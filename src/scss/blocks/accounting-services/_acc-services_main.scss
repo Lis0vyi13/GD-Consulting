@@ -1,0 +1,219 @@
+.acc-services {
+  margin-bottom: 122px;
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    &-title {
+      font-family: EB Garamond;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+    & li {
+      list-style-type: disc;
+      margin-left: 16px;
+    }
+  }
+}
+
+@include _1 {
+  .acc-services {
+    margin-top: 90px;
+
+    &__img {
+      display: flex;
+      align-items: center;
+      & img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+    &__title {
+      font-size: 34px;
+    }
+
+    &__list {
+      font-size: 16px;
+      line-height: 140%;
+      margin-top: 25px;
+      & h2 {
+        display: none;
+      }
+    }
+    &__block {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 33px;
+    }
+
+    &__text {
+      display: flex;
+      align-self: center;
+    }
+  }
+  .money {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 90px;
+    &__title {
+      font-size: 34px;
+    }
+
+    &__img {
+      margin: 0 auto;
+      max-width: 200px;
+      & img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      font-family: EB Garamond;
+      font-size: 22px;
+      line-height: normal;
+      letter-spacing: 0.44px;
+    }
+  }
+}
+
+@include _640 {
+  .acc-services {
+    margin-top: 90px;
+
+    &__img {
+      max-width: 50%;
+      scale: 1.15;
+    }
+    &__title {
+      font-size: 37px;
+      padding-left: 56px;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 33px;
+    }
+    &__list {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+    &__button button {
+      padding: 25px 57px;
+    }
+  }
+  .money {
+    &__title {
+      font-size: 37px;
+      text-align: center;
+      max-width: 388px;
+      margin: 0 auto;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+}
+
+@include _768 {
+  .acc-services,
+  .money {
+    padding: 0 35px;
+  }
+}
+@include _992 {
+  .acc-services {
+    margin-top: 90px;
+    & h2 {
+      display: none;
+    }
+    &__img {
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: normal;
+      max-width: 415px;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 33px;
+    }
+    &__list {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      & h2 {
+        display: flex;
+        padding: 0 0 20px 0;
+      }
+    }
+    &__text {
+      padding: 12px 0 32px 35px;
+      & li {
+        font-size: 22px;
+        line-height: 34px;
+      }
+    }
+    &__button {
+      justify-content: center;
+      & button {
+        padding: 18px 57px;
+      }
+    }
+  }
+  .money {
+    gap: 80px;
+    &__title {
+      font-size: 50px;
+      font-style: normal;
+      line-height: 64px;
+      text-align: center;
+      max-width: 100%;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+
+    &__text {
+      font-family: Mulish;
+      font-size: 26px;
+      line-height: 40px;
+      max-width: 904px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+@include _1200 {
+  .acc-services {
+    &__block {
+      gap: 48px;
+    }
+    &__title {
+      max-width: 100%;
+      font-size: 50px;
+      line-height: 64px;
+    }
+  }
+  .money {
+    &__text {
+      max-width: 1138px;
+    }
+  }
+}

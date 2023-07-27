@@ -42,7 +42,7 @@
   }
 }
 
-.business-ideas {
+.block-img-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -62,28 +62,6 @@
     margin: 0 auto;
   }
 
-  // .business-ideas_button
-
-  &_button {
-    position: relative;
-    margin-top: 40px;
-    display: inline-flex;
-    &:hover {
-      #arrow path {
-        stroke: white;
-      }
-    }
-    &-text {
-      margin-left: -30px;
-    }
-    & svg {
-      top: 52%;
-      left: calc(50% + 55px);
-      transform: translate(-50%, -50%);
-      position: absolute;
-    }
-  }
-
   // .business-ideas_img
 
   &_img {
@@ -95,6 +73,9 @@
     width: 100%;
     height: auto;
     border-radius: 48px 72px 48px 0px;
+  }
+  &_button svg {
+    padding-left: 12px;
   }
 }
 
@@ -137,13 +118,13 @@
       margin: 0 auto;
     }
   }
-  .business-ideas {
+  .block-img-btn {
     display: flex;
     flex-direction: column-reverse;
     padding: 0;
     gap: 40px;
     margin: 0 auto;
-    margin-top: 90px;
+    margin-bottom: 90px;
     // .business-ideas_text
 
     &_text {
@@ -152,7 +133,9 @@
       padding: 0;
     }
     // .business-ideas_button
-
+    &_button {
+      margin-top: 15px;
+    }
     // .business-ideas_img
 
     &_img {
@@ -193,6 +176,13 @@
     line-height: 160%;
     letter-spacing: 0.32px;
   }
+  .description_content p {
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.4px;
+  }
+
+  .description_content h1,
   .reliable-company_text h2,
   .business-ideas_text h2 {
     font-size: 37px;
@@ -203,8 +193,11 @@
 @include _640 {
   .description,
   .reliable-company,
-  .business-ideas {
+  .block-img-btn {
     padding: 15px;
+  }
+  .block-img-btn {
+    margin-bottom: 40px;
   }
 }
 @include _768 {
@@ -225,31 +218,47 @@
   .description img {
     width: 81px;
     top: -10%;
-    transform: translate(400%, -50%);
+    transform: translate(350%, -50%);
+  }
+  .block-img-btn {
+    padding: 0 35px;
   }
   .reliable-company {
     grid-template-columns: 1fr;
-    padding: 0 50px;
+    padding: 0 35px;
+    gap: 70px;
     &_text {
       gap: 30px;
       margin: 0 auto;
+    }
+    &_img {
+      scale: 1.2;
+    }
+  }
+}
+@include _900 {
+  .reliable-company {
+    &_img {
+      scale: 1.3;
     }
   }
 }
 @include _992 {
   .description {
-    padding: 0 50px;
+    padding: 0 35px;
   }
   .reliable-company {
     grid-template-columns: 1fr;
-    padding: 100px 50px;
+    padding: 100px 35px;
     &_img {
       padding: 0;
       margin: 0 auto;
     }
   }
-  .business-ideas {
-    padding: 0 50px;
+  .block-img-btn {
+    &_button {
+      justify-content: center;
+    }
   }
   .reliable-company_text p,
   .business-ideas_text p {
@@ -263,17 +272,6 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1330px) {
-  .business-ideas {
-    &_img img {
-      width: 500px;
-      height: 400px;
-    }
-    &_img {
-      align-items: center;
-    }
-  }
-}
 @include _1200 {
   .description img {
     width: 81px;
@@ -292,12 +290,15 @@
       justify-content: center;
       gap: 40px;
     }
+    &_img {
+      scale: 1;
+    }
   }
 
-  .business-ideas {
+  .block-img-btn {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 80px 0px;
+    padding: 80px 35px;
     align-items: center;
     gap: 24px;
     margin: 0 auto;
@@ -314,21 +315,7 @@
     // .business-ideas_button
 
     &_button {
-      @include button;
-      display: flex;
-      max-width: 321px;
-      flex-direction: row;
-      background-color: #fff;
-      color: #000;
-      &:hover {
-        background-color: #000;
-        color: #fff;
-        transition: ease 0.3s;
-        svg path {
-          stroke: white;
-          transition: ease 0.3s;
-        }
-      }
+      justify-content: start;
     }
 
     // .business-ideas_img
@@ -358,7 +345,7 @@
     }
   }
 
-  .business-ideas {
+  .block-img-btn {
     padding: 80px 0px;
     // .business-ideas_text
 
