@@ -1,0 +1,299 @@
+.modal-success {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  top: 0;
+  background: rgba(86, 96, 107, 0.6);
+  backdrop-filter: blur(3.5px);
+  left: 0;
+  display: flex;
+  align-items: center;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &__return-button {
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  & button {
+    transition: all 0.3s;
+    margin-top: 80px;
+  }
+}
+
+.modal-form__block {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  top: 0;
+  background: rgba(86, 96, 107, 0.6);
+  backdrop-filter: blur(3.5px);
+  left: 0;
+  display: none;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@include _1 {
+  .modal-success {
+    overflow: hidden;
+    & button {
+      width: calc(100% - 20px);
+    }
+    &__content {
+      height: 100vh;
+      width: 100vw;
+      margin-top: 100px;
+      overflow: scroll;
+
+      & img[data-close-button] {
+        display: none;
+      }
+    }
+    & .container {
+      padding: unset;
+    }
+    &__return-button {
+      top: 20px;
+      left: 15px;
+      align-items: center;
+      gap: 5px;
+    }
+
+    & #requests__submit-button {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s;
+      &:before {
+        transition: all 0.5s;
+        border-radius: 32px;
+        content: "Sended";
+        background: url(../icons/main/check-mark.svg) no-repeat;
+        background-position: 71% 30%;
+        padding-top: 18px;
+        padding-left: -20px;
+        cursor: default;
+        color: #000;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: var(--top-value, 100px);
+        left: 0;
+      }
+    }
+  }
+  .modal-form__block {
+    & .container {
+      padding: unset;
+    }
+    & form {
+      width: 90%;
+      margin-top: 40px;
+      margin-bottom: 90px;
+    }
+    & h1 {
+      margin-top: -80px;
+    }
+  }
+}
+@media (min-width: 390px) {
+  .modal-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 67% 30%;
+      }
+    }
+  }
+}
+@include _430 {
+  .modal-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 65% 30%;
+      }
+    }
+  }
+}
+@media (min-width: 500px) {
+  .modal-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 63% 30%;
+      }
+    }
+  }
+}
+@media (min-width: 590px) {
+  .modal-success {
+    & #requests__submit-button {
+      &:before {
+        background-position: 61% 30%;
+      }
+    }
+  }
+}
+@include _640 {
+  .modal-success {
+    overflow: auto;
+    &__return-text {
+      font-size: 22px;
+      font-weight: 500;
+      color: #56606b;
+    }
+    &__content {
+      margin-top: unset;
+    }
+
+    & button {
+      width: 600px;
+    }
+    &__return-button {
+      top: 100px;
+    }
+    & #requests__submit-button {
+      &:before {
+        background-position: 61% 30%;
+      }
+    }
+  }
+  .modal-form__block {
+    & h1 {
+      margin-top: 80px;
+    }
+  }
+}
+@include _768 {
+  .modal-success {
+    & button {
+      width: 703px;
+    }
+    & #requests__submit-button {
+      &:before {
+        background-position: 59% 30%;
+      }
+    }
+  }
+  .modal-form__block {
+    & form {
+      width: unset;
+      margin-top: 80px;
+      margin-bottom: unset;
+    }
+    & h1 {
+      margin-top: 100px;
+    }
+  }
+}
+
+@include _992 {
+  .modal-success {
+    &__return-button {
+      top: 130px;
+    }
+  }
+  .modal-form__block {
+    & h1 {
+      margin-top: 160px;
+    }
+  }
+}
+@include _1200 {
+  .modal-success {
+    z-index: 100000;
+    &__return-button {
+      display: none;
+    }
+    &__content {
+      overflow: auto;
+
+      border-radius: 48px;
+      padding: 273px 137px 193px 137px;
+      height: unset;
+      width: unset;
+      & img[data-close-button] {
+        display: block;
+        content: "";
+        cursor: pointer;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+      }
+    }
+  }
+  .modal-form__block {
+    z-index: 100000;
+
+    & .modal-success__content {
+      padding: 80px 184px;
+    }
+    & .container {
+      padding: 0 15px;
+    }
+    & h1 {
+      margin-top: unset;
+    }
+  }
+}
+@include _1520 {
+  .modal-success {
+    &__content {
+      padding: 273px 285px 193px 285px;
+    }
+  }
+  .modal-form__block {
+    & .modal-success__content {
+      padding: 80px 322px;
+    }
+  }
+}
+@media (max-width: 740px) and (min-height: 640px) and (max-height: 720px) {
+  .modal-form__block {
+    & h1 {
+      margin-top: 243px;
+    }
+  }
+}
+
+@media (max-width: 740px) and (min-height: 720px) and (max-height: 755px) {
+  .modal-form__block {
+    & h1 {
+      margin-top: 200px;
+    }
+  }
+}
+
+@media (max-width: 740px) and (min-height: 755px) and (max-height: 810px) {
+  .modal-form__block {
+    & h1 {
+      margin-top: 160px;
+    }
+  }
+}
+
+@media (max-width: 740px) and (min-height: 810px) and (max-height: 918px) {
+  .modal-form__block {
+    & h1 {
+      margin-top: 120px;
+    }
+  }
+}

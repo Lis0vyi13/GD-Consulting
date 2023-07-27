@@ -1,6 +1,8 @@
 @import "base/mixins";
 @import "base/variables";
 @import "base/fonts";
+@import "blocks/loader";
+@import "blocks/three-cards-block";
 @import "blocks/about_us/about_main";
 @import "blocks/header";
 @import "blocks/footer";
@@ -9,14 +11,15 @@
 @import "blocks/about_us/about_partners_&_contact";
 @import "blocks/main/intro";
 @import "blocks/main/what-we-do";
-@import "blocks/three-cards-block";
 @import "blocks/main/services";
 @import "blocks/main/our-principles";
 @import "blocks/main/satisfied-clients";
 @import "blocks/main/work-together";
-@import "blocks/main/success";
+@import "blocks/main/modals";
 @import "blocks/main/experience";
 @import "blocks/accounting-services/acc-services_main";
+@import "blocks/contact/contact";
+
 
 * {
   //default font-size: 16px | font-weight: 400

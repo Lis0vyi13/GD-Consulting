@@ -79,11 +79,13 @@
         }
       }
 
-      & svg {
+
+      & svg,
+      img {
         left: 0;
         position: absolute;
         top: 50%;
-        left: calc(50% + 110px);
+        left: calc(100% + 10px);
         transform: translateY(-50%);
       }
     }
@@ -95,7 +97,9 @@
       & button {
         font-size: 20px;
       }
-      & svg {
+
+      & svg,
+      img {
         top: 52%;
       }
     }
