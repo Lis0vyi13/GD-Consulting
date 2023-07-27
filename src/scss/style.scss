@@ -9,18 +9,22 @@
 @import "blocks/about_us/about_partners_&_contact";
 @import "blocks/main/intro";
 @import "blocks/main/what-we-do";
-@import "blocks/main/three-cards-block";
+@import "blocks/three-cards-block";
 @import "blocks/main/services";
 @import "blocks/main/our-principles";
 @import "blocks/main/satisfied-clients";
 @import "blocks/main/work-together";
 @import "blocks/main/success";
 @import "blocks/main/experience";
+@import "blocks/accounting-services/acc-services_main";
 
 * {
   //default font-size: 16px | font-weight: 400
   font-family: "Mulish", sans-serif;
   scroll-behavior: smooth;
+}
+svg path {
+  transition: all 0.3s;
 }
 body {
   overflow-x: hidden;
@@ -70,11 +74,7 @@ a {
 }
 
 .button_arrow {
-  padding: 15px 24px 15px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  padding: 17px 60px;
 }
 ul,
 li {

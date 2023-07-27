@@ -14,6 +14,7 @@
 
   &_socials {
     display: inline-flex;
+    justify-content: center;
     padding-top: 30px;
     align-items: center;
     gap: 32px;
@@ -53,14 +54,12 @@
   }
 
   &_logo {
-    margin-right: auto;
   }
 
   &_links {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-left: auto;
   }
 
   &_links ul {
@@ -87,5 +86,153 @@
     display: flex;
     color: white;
     align-items: center;
+  }
+}
+
+//////////////////////////////////////////////////////////////
+@include _1 {
+  .contact-with-us {
+    padding: 0px;
+    margin-bottom: 90px;
+
+    &_title {
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+      gap: 40px;
+    }
+    &_title h2 {
+      font-size: 34px;
+      font-style: normal;
+      line-height: normal;
+    }
+    &_title p {
+      font-size: 16px;
+      font-style: normal;
+      line-height: 160%;
+      letter-spacing: 0.32px;
+    }
+
+    &_socials {
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      align-items: center;
+      gap: 32px;
+      width: 100%;
+    }
+    &_socials a {
+      padding: 22px 0;
+      width: 100%;
+    }
+  }
+  .footer {
+    &_content {
+      padding: 40px 10px;
+    }
+    &_logo {
+      padding: 0 18px;
+    }
+    &_logo img {
+      width: 100%;
+      max-width: 263px;
+    }
+    &_row {
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+    &_links {
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      font-size: 18px;
+      line-height: 160%;
+    }
+    &_bottom {
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      line-height: 160%;
+    }
+  }
+}
+
+@include _430 {
+  .contact-with-us {
+    padding: 5px;
+    &_title p {
+      font-size: 18px;
+      letter-spacing: 0.326px;
+    }
+  }
+}
+
+@include _768 {
+  .contact-with-us {
+    padding: 35px;
+    &_title h2 {
+      font-size: 50px;
+      line-height: 80px;
+    }
+    &_title p {
+      font-size: 22px;
+      line-height: 34px;
+    }
+    &_socials {
+      flex-direction: row;
+    }
+
+    &_socials a {
+      max-width: 240px;
+    }
+  }
+}
+
+@include _900 {
+  .footer {
+    &_content {
+      padding: 60px 50px;
+    }
+    &_logo {
+      padding: 0 18px;
+    }
+    &_logo img {
+      max-width: 214px;
+    }
+    &_row {
+      flex-direction: row;
+      justify-content: unset;
+      gap: 40px;
+    }
+    &_links {
+      flex-direction: row;
+      margin-left: auto;
+      padding: 16px 0;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    &_bottom {
+      flex-direction: row;
+      gap: 15px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+@include _1330 {
+  .footer {
+    &_content {
+      padding: 60px 50px;
+    }
+    &_logo {
+      padding: 0 18px;
+    }
+    &_logo img {
+      max-width: 100%;
+    }
+    &_links {
+      gap: 40px;
+    }
   }
 }

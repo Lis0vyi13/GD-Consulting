@@ -1,6 +1,6 @@
 .advantages-cards {
   display: grid;
-  padding: 0 48px;
+  padding: 0 35px;
   gap: 48px;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 120px;
@@ -18,24 +18,13 @@
     border: 1px solid #000;
     max-height: 424px;
   }
-
-  &_UAE,
-  &_local p {
-    max-width: 628px;
-  }
-  &_UAE h2 {
-    max-width: 371px;
-  }
-  &_local h2 {
-    max-width: 525px;
-  }
 }
 .trust-cards {
   // .trust-cards_block
 
   &_block {
     display: grid;
-    padding: 40px 48px;
+    padding: 40px 35px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 120px;
     gap: 48px;
@@ -43,7 +32,7 @@
   }
   &_title {
     display: flex;
-    padding: 56px 0px 56px 48px;
+    padding: 56px 0px 56px 35px;
   }
 
   // .trust-cards_services
@@ -108,7 +97,7 @@
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 48px;
+      padding: 56px 0px 56px 35px;
     }
     &_title h2 {
       font-size: 34px;
@@ -127,9 +116,8 @@
 }
 @include _640 {
   .advantages-cards {
-    padding: 0 50px;
     gap: 30px;
-
+    padding: 15px;
     // .advantages-cards_UAE
 
     &_UAE,
@@ -154,14 +142,13 @@
     // .trust-cards_block
 
     &_block {
-      padding: 0px 35px;
       margin-bottom: 60px;
       gap: 30px;
       // .trust-cards_title
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 48px;
+      padding: 56px 0px 56px 35px;
     }
 
     &_title h2 {
@@ -179,10 +166,21 @@
     }
   }
 }
+@include _768 {
+  .advantages-cards {
+    padding: 0 35px;
+  }
+  .trust-cards {
+    // .trust-cards_block
+    &_block {
+      padding: 0px 35px;
+    }
+  }
+}
 @include _992 {
   .advantages-cards {
     grid-template-columns: 1fr 1fr;
-    padding: 0 50px;
+    padding: 0 35px;
     gap: 30px;
     margin-bottom: 150px;
     &_UAE,
@@ -206,14 +204,13 @@
 
     &_block {
       grid-template-columns: 1fr 1fr;
-      padding: 0px 50px;
       margin-bottom: 60px;
       gap: 30px;
       // .trust-cards_title
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 48px;
+      padding: 56px 0px 56px 35px;
     }
     &_title h2 {
       font-size: 50px;
@@ -232,7 +229,7 @@
 @include _1200 {
   .advantages-cards {
     display: grid;
-    padding: 0 50px;
+    padding: 0 35px;
     gap: 30px;
     margin-bottom: 150px;
 
@@ -247,14 +244,14 @@
     // .trust-cards_block
 
     &_block {
-      padding: 40px 48px;
+      padding: 40px 35px;
       margin-bottom: 120px;
       gap: 48px;
       // .trust-cards_title
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 48px;
+      padding: 56px 0px 56px 35px;
     }
 
     // .trust-cards_services
@@ -286,7 +283,7 @@
 }
 @include _1630 {
   .advantages-cards {
-    padding: 0 48px;
+    padding: 0 35px;
     gap: 48px;
     margin-bottom: 120px;
 
