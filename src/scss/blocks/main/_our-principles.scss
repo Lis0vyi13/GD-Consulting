@@ -5,6 +5,7 @@
 
   &__cards {
     display: grid;
+    grid-auto-rows: minmax(0, 1fr);
   }
 
   &__card {

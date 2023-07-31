@@ -30,6 +30,7 @@
     &__img {
       display: flex;
       align-items: center;
+      margin-left: auto;
       & img {
         max-width: 100%;
         height: auto;
@@ -69,10 +70,11 @@
     }
 
     &__img {
-      margin: 0 auto;
-      max-width: 200px;
+      display: flex;
+
+      justify-content: center;
       & img {
-        max-width: 100%;
+        max-width: 200px;
         height: auto;
       }
     }
@@ -92,7 +94,6 @@
 
     &__img {
       max-width: 50%;
-      scale: 1.15;
     }
     &__title {
       font-size: 37px;
@@ -109,9 +110,6 @@
       gap: 20px;
       flex-direction: column;
     }
-    &__button button {
-      padding: 25px 57px;
-    }
   }
   .money {
     &__title {
@@ -127,12 +125,6 @@
   }
 }
 
-@include _768 {
-  .acc-services,
-  .money {
-    padding: 0 35px;
-  }
-}
 @include _992 {
   .acc-services {
     margin-top: 90px;
@@ -163,7 +155,7 @@
       }
     }
     &__text {
-      padding: 12px 0 32px 35px;
+      padding: 12px 0 32px 0;
       & li {
         font-size: 22px;
         line-height: 34px;
@@ -186,7 +178,7 @@
       max-width: 100%;
     }
 
-    &__img {
+    &__img img {
       max-width: 100%;
     }
 
@@ -215,5 +207,9 @@
     &__text {
       max-width: 1138px;
     }
+  }
+  .grid-item-wide {
+    grid-column: 1 / span 2;
+    justify-content: normal;
   }
 }

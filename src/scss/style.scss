@@ -19,7 +19,7 @@
 @import "blocks/main/experience";
 @import "blocks/accounting-services/acc-services_main";
 @import "blocks/contact/contact";
-
+@import "blocks/financial-consulting/financial-consulting";
 
 * {
   //default font-size: 16px | font-weight: 400
@@ -154,7 +154,11 @@ input {
     margin-top: 120px;
   }
 }
-
+@include _900 {
+  .container {
+    padding: 0 50px;
+  }
+}
 @media (min-width: 1920px) {
   #fullscreen-decor {
     scale: 1.05;

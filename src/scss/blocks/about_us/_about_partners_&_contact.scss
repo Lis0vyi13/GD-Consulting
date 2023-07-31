@@ -1,11 +1,8 @@
 .partners-logo {
   display: grid;
-  padding: 0 35px;
   gap: 24px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(0, 1fr);
-
-  margin-bottom: 120px;
   // .partners-logo_block
 
   &_block {
@@ -19,7 +16,6 @@
 }
 .сonsultations {
   display: flex;
-  padding-top: 80px;
   flex-direction: column;
   align-items: center;
   gap: 48px;
@@ -59,7 +55,6 @@
     padding: 0;
     gap: 24px;
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
     // .partners-logo_block
 
     &_block {
@@ -75,17 +70,17 @@
   }
 }
 @include _640 {
-}
-@include _768 {
-  .partners-logo {
-    padding: 0 35px;
+  .сonsultations {
+    margin: 100px 0;
   }
 }
 @include _992 {
+  .сonsultations {
+    margin: 220px 0 150px;
+  }
 }
 @include _1200 {
   .partners-logo {
-    padding: 0 35px;
     gap: 24px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     &_block {
@@ -95,5 +90,10 @@
       max-width: 100%;
       height: auto;
     }
+  }
+}
+@include _1630 {
+  .сonsultations {
+    margin: 300px 0 120px;
   }
 }

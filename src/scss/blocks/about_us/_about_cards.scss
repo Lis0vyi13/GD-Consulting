@@ -1,6 +1,5 @@
 .advantages-cards {
   display: grid;
-  padding: 0 35px;
   gap: 48px;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 120px;
@@ -24,7 +23,7 @@
 
   &_block {
     display: grid;
-    padding: 40px 35px;
+    padding: 40px 0;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 120px;
     gap: 48px;
@@ -32,7 +31,7 @@
   }
   &_title {
     display: flex;
-    padding: 56px 0px 56px 35px;
+    padding: 56px;
   }
 
   // .trust-cards_services
@@ -40,7 +39,6 @@
   &_services_card,
   &_success_card {
     display: flex;
-    max-width: 788px;
     padding: 64px 80px;
     border-radius: 48px;
     border: 2px solid #000;
@@ -97,7 +95,7 @@
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 35px;
+      padding: 56px 0px 56px 0;
     }
     &_title h2 {
       font-size: 34px;
@@ -108,7 +106,6 @@
 
     &_services_card,
     &_success_card {
-      max-width: 788px;
       padding: 30px;
       min-height: 100px;
     }
@@ -117,7 +114,6 @@
 @include _640 {
   .advantages-cards {
     gap: 30px;
-    padding: 15px;
     // .advantages-cards_UAE
 
     &_UAE,
@@ -148,7 +144,7 @@
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 35px;
+      padding: 56px 0px 56px 0;
     }
 
     &_title h2 {
@@ -161,26 +157,16 @@
     &_services_card,
     &_success_card {
       max-width: 788px;
-      padding: 35px;
+      padding: 40px;
       min-height: 100px;
     }
   }
 }
 @include _768 {
-  .advantages-cards {
-    padding: 0 35px;
-  }
-  .trust-cards {
-    // .trust-cards_block
-    &_block {
-      padding: 0px 35px;
-    }
-  }
 }
 @include _992 {
   .advantages-cards {
     grid-template-columns: 1fr 1fr;
-    padding: 0 35px;
     gap: 30px;
     margin-bottom: 150px;
     &_UAE,
@@ -210,7 +196,7 @@
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 35px;
+      padding: 56px 0px 56px 0;
     }
     &_title h2 {
       font-size: 50px;
@@ -229,7 +215,6 @@
 @include _1200 {
   .advantages-cards {
     display: grid;
-    padding: 0 35px;
     gap: 30px;
     margin-bottom: 150px;
 
@@ -244,14 +229,14 @@
     // .trust-cards_block
 
     &_block {
-      padding: 40px 35px;
+      padding: 40px 0;
       margin-bottom: 120px;
       gap: 48px;
       // .trust-cards_title
     }
     &_title {
       display: flex;
-      padding: 56px 0px 56px 35px;
+      padding: 56px 0px 56px 0;
     }
 
     // .trust-cards_services
@@ -283,7 +268,6 @@
 }
 @include _1630 {
   .advantages-cards {
-    padding: 0 35px;
     gap: 48px;
     margin-bottom: 120px;
 
