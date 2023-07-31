@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <header class="header">
+    <header class="wow header animate__animated animate__fadeInDown">
       <div class="container">
         <nav class="nav">
           <div class="logo">
@@ -119,7 +123,7 @@
 
     <div id="intro_container" class="container">
       <div class="intro">
-        <div class="intro_service">
+        <div class="wow intro_service animate__animated animate__fadeIn" data-wow-delay=".2s">
           <div class="intro_service__content">
             <h2 class="intro_service__title">
               Take сontrol of your finances with our reliable services
@@ -142,7 +146,10 @@
         </div>
         <div class="intro_options">
           <div>
-            <div class="intro_options__trust">
+            <div
+              class="wow intro_options__trust animate__animated animate__fadeIn"
+              data-wow-delay=".4s"
+            >
               <div class="trust_image">
                 <img src="icons/main/Trust.svg" alt="#" />
               </div>
@@ -155,7 +162,10 @@
                 </span>
               </a>
             </div>
-            <div class="intro_options__clients">
+            <div
+              class="wow intro_options__clients animate__animated animate__fadeIn"
+              data-wow-delay=".6s"
+            >
               <div class="clients_content">
                 <div class="trust_text">
                   <p class="clients_text">100+</p>
@@ -172,7 +182,10 @@
             </div>
           </div>
           <div>
-            <div class="intro_options__consultations">
+            <div
+              class="wow intro_options__consultations animate__animated animate__fadeIn"
+              data-wow-delay=".8s"
+            >
               <div>
                 <p class="consultations_text">Get quick free сonsultations</p>
               </div>
@@ -207,12 +220,21 @@
         </div>
       </div>
     </div>
-    <div class="what-we-do">
+    <div class="wow what-we-do animate__animated animate__fadeInUp">
       <div class="container">
         <div class="what-we-do__container">
           <div class="what-we-do__content">
-            <p id="what-we-do__anchor" class="extra-large-title what-we-do__title">What we do</p>
-            <p class="large_subtitle what-we-do__description">
+            <p
+              id="what-we-do__anchor"
+              class="wow extra-large-title what-we-do__title animate__animated animate__fadeInUp"
+              data-wow-delay=".2s"
+            >
+              What we do
+            </p>
+            <p
+              class="wow large_subtitle what-we-do__description animate__animated animate__fadeInUp"
+              data-wow-delay=".4s"
+            >
               We provide accounting services, tax consultancy and financial solutions to help you
               stay ahead of the game from all key sectors of the economy. <br />
               <br />
@@ -220,7 +242,12 @@
               of development and find winning opportunities.
             </p>
             <a href="about_us.html">
-              <button class="button what-we-do__button">More about us</button>
+              <button
+                class="wow button what-we-do__button animate__animated animate__fadeInUp"
+                data-wow-delay=".4s"
+              >
+                More about us
+              </button>
             </a>
           </div>
         </div>
@@ -229,8 +256,10 @@
 
     <div class="what-sets-us-apart">
       <div class="container">
-        <h1 class="three-cards-block__title">What sets us apart</h1>
-        <div class="three-cards-block__cards">
+        <h1 class="wow three-cards-block__title animate__animated animate__fadeInLeft">
+          What sets us apart
+        </h1>
+        <div class="wow three-cards-block__cards animate__animated animate__fadeInUp">
           <div class="three-cards-block__card">
             <div class="three-cards-block__img">
               <img src="icons/main/what-sets-us-apart/connections.svg" alt="#" />
@@ -270,7 +299,9 @@
             </div>
           </div>
         </div>
-        <div class="three-cards-block__button experience__button">
+        <div
+          class="wow three-cards-block__button experience__button animate__animated animate__fadeInUp"
+        >
           <button id="toForm" class="button">
             <span class="arrow-button__text"
               >Get free сonsultations
@@ -295,9 +326,11 @@
     </div>
     <div class="services">
       <div class="container">
-        <h1 class="three-cards-block__title">Services we provide</h1>
+        <h1 class="wow three-cards-block__title animate__animated animate__fadeInLeft">
+          Services we provide
+        </h1>
         <div class="services__cards">
-          <div class="services__card">
+          <div class="wow services__card animate__animated animate__fadeInLeft">
             <div class="services__img">
               <img src="icons/main/services/green-circle.svg" alt="#" />
             </div>
@@ -333,7 +366,7 @@
               </a>
             </div>
           </div>
-          <div class="services__card reverse">
+          <div class="wow services__card reverse animate__animated animate__fadeInRight">
             <div class="services__img">
               <img src="icons/main/services/red-circle.svg" alt="#" />
             </div>
@@ -369,7 +402,7 @@
               </a>
             </div>
           </div>
-          <div class="services__card">
+          <div class="wow services__card animate__animated animate__fadeInLeft">
             <div class="services__img">
               <img src="icons/main/services/yellow-circle.svg" alt="#" />
             </div>
@@ -408,10 +441,13 @@
         </div>
       </div>
     </div>
+
     <div class="experience">
       <div class="container">
-        <h1 class="three-cards-block__title">Experience</h1>
-        <div class="three-cards-block__cards">
+        <h1 class="wow three-cards-block__title animate__animated animate__fadeInLeft">
+          Experience
+        </h1>
+        <div class="wow three-cards-block__cards animate__animated animate__fadeInUp">
           <div class="three-cards-block__card">
             <div class="three-cards-block__img">
               <img src="icons/main/experience/dubai.svg" alt="#" />
@@ -455,7 +491,9 @@
             </div>
           </div>
         </div>
-        <div class="three-cards-block__button experience__button">
+        <div
+          class="wow three-cards-block__button experience__button animate__animated animate__fadeInUp"
+        >
           <button id="toForm" class="button">
             <span class="arrow-button__text"
               >Get free сonsultations
@@ -480,16 +518,21 @@
     </div>
     <div class="our-principles">
       <div class="container">
-        <div class="our-principles__star">
+        <div class="wow our-principles__star animate__animated animate__fadeInLeft">
           <img src="icons/main/our-principles/star.svg" alt="#" />
         </div>
 
         <div class="our-principles__cards">
           <div class="our-principles__card">
-            <h1 class="three-cards-block__title">Our principles</h1>
+            <h1 class="wow three-cards-block__title animate__animated animate__fadeInLeft">
+              Our principles
+            </h1>
           </div>
 
-          <div class="our-principles__card light-blue">
+          <div
+            class="wow animate__animated animate__fadeIn our-principles__card light-blue"
+            data-wow-delay=".2s"
+          >
             <p class="our-principles__text">
               Providing an individual approach to each client and developing a personalized solution
               for their business
@@ -507,7 +550,10 @@
             </button>
           </div>
 
-          <div class="our-principles__card beige">
+          <div
+            class="wow animate__animated animate__fadeIn our-principles__card beige"
+            data-wow-delay=".4s"
+          >
             <p class="our-principles__text">
               Maintaining transparency in communication with clients and promptly responding to
               their inquiries
@@ -525,7 +571,10 @@
             </button>
           </div>
 
-          <div class="our-principles__card light-blue">
+          <div
+            class="wow animate__animated animate__fadeIn our-principles__card light-blue"
+            data-wow-delay=".6s"
+          >
             <p class="our-principles__text">
               Prioritizing the completion of tasks in full and on time, as one of the key factors
             </p>
@@ -542,7 +591,10 @@
             </button>
           </div>
 
-          <div class="our-principles__card beige">
+          <div
+            class="wow animate__animated animate__fadeIn our-principles__card beige"
+            data-wow-delay=".8s"
+          >
             <p class="our-principles__text">
               Taking care of employees to ensure high-quality task completion every day
             </p>
@@ -559,7 +611,10 @@
             </button>
           </div>
 
-          <div class="our-principles__card light-blue">
+          <div
+            class="wow animate__animated animate__fadeIn our-principles__card light-blue"
+            data-wow-delay="1s"
+          >
             <p class="our-principles__text">
               Providing quality solutions based on experience and practical knowledge
             </p>
@@ -598,12 +653,19 @@
         </div>
       </div>
     </div>
+
     <div id="satisfied-clients" class="satisfied-clients">
       <div class="container">
         <div class="satisfied-clients__content">
-          <h1 class="satisfied-clients__title">100+ Satisfied Clients</h1>
-          <img src="icons/main/what-sets-us-apart/connections.svg" alt="#" />
-          <div class="satisfied-clients__text">
+          <h1 class="wow animate__animated animate__fadeInUp satisfied-clients__title">
+            100+ Satisfied Clients
+          </h1>
+          <img
+            class="wow animate__animated animate__fadeInUp"
+            src="icons/main/what-sets-us-apart/connections.svg"
+            alt="#"
+          />
+          <div class="wow animate__animated animate__fadeInUp satisfied-clients__text">
             <p class="large_subtitle satisfied-clients__subtitle">
               At G&D Consulting, we have successfully helped numerous clients in overcoming
               financial, tax, and accounting challenges. With a growing base of over 100 satisfied
@@ -623,11 +685,11 @@
         </div>
       </div>
     </div>
-    <div class="work-together">
+    <div class="wow animate__animated animate__fadeInUp work-together">
       <div class="container">
         <div class="work-together__content">
           <h1 class="three-cards-block__title">Let’s work together!</h1>
-          <form action="#" class="work-together__form">
+          <form action="#" class="work-together__form wow animate__animated animate__fadeInUp">
             <div class="work-together__form-inputs">
               <div class="work-together__form-input">
                 <input required name="name" type="name" placeholder="Your name" />
@@ -844,27 +906,39 @@
       </div>
     </div>
 
-    <div class="contact-with-us">
+    <div class="wow animate__animated animate__fadeInUp contact-with-us">
       <div class="contact-with-us_title">
         <h2>Or you can contact with us</h2>
       </div>
       <div class="contact-with-us_socials">
-        <a href="ссылка_на_WhatsApp" class="button_whatsapp">
+        <a
+          href="ссылка_на_WhatsApp"
+          class="wow animate__animated animate__fadeIn button_whatsapp"
+          data-wow-delay=".2s"
+        >
           <img src="icons/general/whatsapp.svg" alt="#" />
           <p class="medium_p_font">WhatsApp</p>
         </a>
 
-        <a href="ссылка_на_Telegram" class="button_telegram">
+        <a
+          href="ссылка_на_Telegram"
+          class="wow animate__animated animate__fadeIn button_telegram"
+          data-wow-delay=".4s"
+        >
           <img src="icons/general/telegram.svg" alt="#" />
           <p class="medium_p_font">Telegram</p>
         </a>
 
-        <a href="ссылка_на_Email" class="button_email">
+        <a
+          href="ссылка_на_Email"
+          class="wow animate__animated animate__fadeIn button_email"
+          data-wow-delay=".6s"
+        >
           <img src="icons/general/email.svg" alt="#" />
           <p class="medium_p_font">Email</p>
         </a>
       </div>
-      <p class="large_subtitle">
+      <p class="wow animate__animated animate__fadeInTop large_subtitle">
         Click for a free consultation and confidently achieve financial goals. Empower your business
         with our expert services. Act now!
       </p>
@@ -895,6 +969,10 @@
     </footer>
     <div class="lds-dual-ring"></div>
     <div class="blur"></div>
+    <script src="js/animations/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script type="module" src="js/burger.js"></script>
     <script type="module" src="js/form.js"></script>
     <script type="module" src="js/modals.js"></script>
