@@ -5,7 +5,6 @@
 
   &__cards {
     display: grid;
-    grid-auto-rows: minmax(0, 1fr);
   }
 
   &__card {
@@ -52,9 +51,13 @@
 @include _1 {
   .our-principles {
     margin-top: 60px;
-
+    &__title {
+      display: block;
+      margin-bottom: 40px;
+    }
     &__cards {
       grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
     }
     &__star {
       display: none;
@@ -69,12 +72,7 @@
     &__card {
       padding: 30px;
       &:first-child {
-        height: auto;
-        margin-bottom: 36px;
-        padding-left: unset;
-      }
-      &:nth-child(2) {
-        margin-top: -230px;
+        display: none;
       }
     }
     &__button {
@@ -83,51 +81,10 @@
     }
   }
 }
-@media (min-width: 320px) {
-  .our-principles {
-    &__card {
-      &:nth-child(2) {
-        margin-top: -200px;
-      }
-    }
-  }
-}
-@media (min-width: 345px) {
-  .our-principles {
-    &__card {
-      &:nth-child(2) {
-        margin-top: -180px;
-      }
-    }
-  }
-}
-@include _430 {
-  .our-principles {
-    &__card {
-      &:nth-child(2) {
-        margin-top: -150px;
-      }
-    }
-  }
-}
 
-@media (min-width: 532px) {
-  .our-principles {
-    &__card {
-      &:nth-child(2) {
-        margin-top: -120px;
-      }
-    }
-  }
-}
 @include _640 {
   .our-principles {
     margin-top: 70px;
-    &__card {
-      &:nth-child(2) {
-        margin-top: -105px;
-      }
-    }
   }
 }
 
@@ -136,9 +93,6 @@
     &__card {
       &:not(:first-child) {
         min-height: 192px;
-      }
-      &:nth-child(2) {
-        margin-top: -110px;
       }
     }
     &__text {
@@ -171,14 +125,19 @@
 @include _1200 {
   .our-principles {
     margin-top: 215px;
+    &__title {
+      display: none;
+    }
     &__cards {
       grid-template-columns: 1fr 1fr 1fr;
       min-height: 800px;
+      grid-auto-rows: minmax(0, 1fr);
     }
     &__card {
       padding: 40px;
       height: unset;
       &:first-child {
+        display: block;
         padding-left: 40px;
         margin-bottom: unset;
       }
