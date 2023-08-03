@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Financial Consulting</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon/favicon.png" />
   </head>
   <body>
-    <header class="header">
+    <header class="wow header animate__animated animate__fadeInDown">
       <div class="container">
         <nav class="nav">
           <div class="logo">
@@ -75,7 +81,7 @@
                 <a class="menu_link" href="accounting-services.html"> Accounting Services </a>
                 <a class="menu_link" href="tax-consulting.html">Tax Consulting</a>
                 <a class="menu_link" href="financial-consulting.html">Financial Consulting</a>
-                <a class="menu_link" href="about_us.html">About Us</a>
+                <a class="menu_link" href="about-us.html">About Us</a>
                 <a class="menu_link" href="contact.html">Contact</a>
               </div>
             </div>
@@ -315,17 +321,31 @@
           <p class="medium_p_font">Get a free consultation and find out the cost of services</p>
         </div>
         <div class="contact-with-us_socials">
-          <a href="ссылка_на_WhatsApp" class="button_whatsapp">
+          <a
+            href="https://www.whatsapp.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_whatsapp"
+          >
             <img src="icons/general/whatsapp.svg" alt="#" />
             <p class="medium_p_font">WhatsApp</p>
           </a>
 
-          <a href="ссылка_на_Telegram" class="button_telegram">
+          <a
+            href="https://web.telegram.org/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_telegram"
+            data-wow-delay=".2s"
+          >
             <img src="icons/general/telegram.svg" alt="#" />
             <p class="medium_p_font">Telegram</p>
           </a>
 
-          <a href="ссылка_на_Email" class="button_email">
+          <a
+            href="https://www.gmail.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_email"
+            data-wow-delay=".4s"
+          >
             <img src="icons/general/email.svg" alt="#" />
             <p class="medium_p_font">Email</p>
           </a>
@@ -356,6 +376,10 @@
       </div>
     </footer>
     <div class="blur"></div>
+    <script src="js/animations/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="js/burger.js"></script>
   </body>
-  <script src="js/burger.js"></script>
 </html>

@@ -126,8 +126,8 @@
 
     <div class="contact">
       <div class="container">
-        <h1 class="contact__title">Contact</h1>
-        <div class="contact__content">
+        <h1 class="wow animate__animated animate__fadeInUp contact__title">Contact</h1>
+        <div class="contact__content wow animate__animated animate__fadeInUp">
           <div class="contact__item">
             <img src="icons/contact/pin.svg" alt="#" />
             <a href=""> <p class="large_subtitle">Poltava, Ukraine</p> </a>
@@ -157,7 +157,7 @@
             </a>
           </div>
         </div>
-        <div class="contact__map">
+        <div class="wow animate__animated animate__fadeInUp contact__map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840.984947681433!2d34.55065731730006!3d49.58922536399447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825f6201e3de1%3A0xfa1c1f1114c6f7b0!2z0JrQvtGA0L_Rg9GB0L3Ri9C5INGB0LDQtA!5e0!3m2!1sru!2sua!4v1690393093325!5m2!1sru!2sua"
             width="600"
@@ -170,22 +170,36 @@
         </div>
       </div>
       <div class="contact-with-us">
-        <div class="contact-with-us_title">
+        <div class="wow animate__animated animate__fadeInUp contact-with-us_title">
           <h2>Or you can contact with us</h2>
           <p class="medium_p_font">Get a free consultation and find out the cost of services</p>
         </div>
         <div class="contact-with-us_socials">
-          <a href="https://www.whatsapp.com/" class="button_whatsapp" target="_blank">
+          <a
+            href="https://www.whatsapp.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_whatsapp"
+          >
             <img src="icons/general/whatsapp.svg" alt="#" />
             <p class="medium_p_font">WhatsApp</p>
           </a>
 
-          <a href="https://web.telegram.org/" class="button_telegram" target="_blank">
+          <a
+            href="https://web.telegram.org/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_telegram"
+            data-wow-delay=".2s"
+          >
             <img src="icons/general/telegram.svg" alt="#" />
             <p class="medium_p_font">Telegram</p>
           </a>
 
-          <a href="https://www.gmail.com/" class="button_email" target="_blank">
+          <a
+            href="https://www.gmail.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_email"
+            data-wow-delay=".4s"
+          >
             <img src="icons/general/email.svg" alt="#" />
             <p class="medium_p_font">Email</p>
           </a>
@@ -218,6 +232,10 @@
     <div class="lds-dual-ring"></div>
 
     <div class="blur"></div>
+    <script src="js/animations/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script type="module" src="js/burger.js"></script>
   </body>
 </html>

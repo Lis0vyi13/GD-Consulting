@@ -309,17 +309,31 @@
           <p class="medium_p_font">Get a free consultation and find out the cost of services</p>
         </div>
         <div class="contact-with-us_socials">
-          <a href="https://www.whatsapp.com/" class="button_whatsapp" target="_blank">
+          <a
+            href="https://www.whatsapp.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_whatsapp"
+          >
             <img src="icons/general/whatsapp.svg" alt="#" />
             <p class="medium_p_font">WhatsApp</p>
           </a>
 
-          <a href="https://web.telegram.org/" class="button_telegram" target="_blank">
+          <a
+            href="https://web.telegram.org/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_telegram"
+            data-wow-delay=".2s"
+          >
             <img src="icons/general/telegram.svg" alt="#" />
             <p class="medium_p_font">Telegram</p>
           </a>
 
-          <a href="https://www.gmail.com/" class="button_email" target="_blank">
+          <a
+            href="https://www.gmail.com/"
+            target="_blank"
+            class="wow animate__animated animate__fadeInUp button_email"
+            data-wow-delay=".4s"
+          >
             <img src="icons/general/email.svg" alt="#" />
             <p class="medium_p_font">Email</p>
           </a>
@@ -350,6 +364,10 @@
       </div>
     </footer>
     <div class="blur"></div>
+    <script src="js/animations/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="js/burger.js"></script>
   </body>
-  <script src="js/burger.js"></script>
 </html>
