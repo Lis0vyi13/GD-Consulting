@@ -50,7 +50,6 @@ li {
 .container {
   max-width: 1750px;
   margin: 0 auto;
-  padding: 0 15px;
   position: relative;
 }
 
@@ -129,7 +128,10 @@ input {
 @include _1 {
   #fullscreen-decor {
     margin-top: 30px;
-    scale: 1.6;
+    scale: 1.4;
+  }
+  .container {
+    padding: 0 15px;
   }
 }
 @include _430 {
@@ -148,17 +150,25 @@ input {
     scale: 1.6;
   }
 }
+
+@include _900 {
+  .container {
+    padding: 0 50px;
+  }
+}
 @include _992 {
   #fullscreen-decor {
     scale: 1.4;
     margin-top: 120px;
   }
 }
-@include _900 {
+
+@include _1520 {
   .container {
-    padding: 0 50px;
+    padding: 0 100px;
   }
 }
+
 @media (min-width: 1920px) {
   #fullscreen-decor {
     scale: 1.05;

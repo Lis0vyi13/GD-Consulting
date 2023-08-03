@@ -266,7 +266,7 @@
     }
   }
 }
-@include _1980 {
+@media (min-width: 2150px) {
   .what-we-do {
     & .container {
       &::after {

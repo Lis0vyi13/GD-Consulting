@@ -69,9 +69,12 @@
     &__card {
       padding: 30px;
       &:first-child {
-        height: unset;
+        height: auto;
         margin-bottom: 36px;
         padding-left: unset;
+      }
+      &:nth-child(2) {
+        margin-top: -230px;
       }
     }
     &__button {
@@ -80,10 +83,51 @@
     }
   }
 }
+@media (min-width: 320px) {
+  .our-principles {
+    &__card {
+      &:nth-child(2) {
+        margin-top: -200px;
+      }
+    }
+  }
+}
+@media (min-width: 345px) {
+  .our-principles {
+    &__card {
+      &:nth-child(2) {
+        margin-top: -180px;
+      }
+    }
+  }
+}
+@include _430 {
+  .our-principles {
+    &__card {
+      &:nth-child(2) {
+        margin-top: -150px;
+      }
+    }
+  }
+}
 
+@media (min-width: 532px) {
+  .our-principles {
+    &__card {
+      &:nth-child(2) {
+        margin-top: -120px;
+      }
+    }
+  }
+}
 @include _640 {
   .our-principles {
     margin-top: 70px;
+    &__card {
+      &:nth-child(2) {
+        margin-top: -105px;
+      }
+    }
   }
 }
 
@@ -92,6 +136,9 @@
     &__card {
       &:not(:first-child) {
         min-height: 192px;
+      }
+      &:nth-child(2) {
+        margin-top: -110px;
       }
     }
     &__text {
@@ -134,6 +181,9 @@
       &:first-child {
         padding-left: 40px;
         margin-bottom: unset;
+      }
+      &:nth-child(2) {
+        margin-top: unset;
       }
       & h1 {
         max-width: 412px;

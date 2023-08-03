@@ -275,11 +275,16 @@
     &_logo {
       padding: 0 18px;
     }
-    &_logo img {
-      max-width: 100%;
-    }
+
     &_links {
       gap: 40px;
+    }
+  }
+}
+@media (min-width: 1390px) {
+  .footer {
+    &_logo img {
+      max-width: 383px;
     }
   }
 }
