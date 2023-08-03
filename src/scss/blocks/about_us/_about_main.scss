@@ -74,9 +74,6 @@
     height: auto;
     border-radius: 48px 72px 48px 0px;
   }
-  &_button svg {
-    padding-left: 12px;
-  }
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -191,11 +188,6 @@
   }
 }
 @include _640 {
-  .description,
-  .reliable-company,
-  .block-img-btn {
-    padding: 15px;
-  }
   .block-img-btn {
     margin-bottom: 40px;
   }
@@ -220,12 +212,8 @@
     top: -10%;
     transform: translate(350%, -50%);
   }
-  .block-img-btn {
-    padding: 0 35px;
-  }
   .reliable-company {
     grid-template-columns: 1fr;
-    padding: 0 35px;
     gap: 70px;
     &_text {
       gap: 30px;
@@ -244,12 +232,9 @@
   }
 }
 @include _992 {
-  .description {
-    padding: 0 35px;
-  }
   .reliable-company {
     grid-template-columns: 1fr;
-    padding: 100px 35px;
+    padding: 100px 0;
     &_img {
       padding: 0;
       margin: 0 auto;
@@ -298,7 +283,7 @@
   .block-img-btn {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 80px 35px;
+    padding: 80px 0;
     align-items: center;
     gap: 24px;
     margin: 0 auto;
