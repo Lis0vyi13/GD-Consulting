@@ -121,11 +121,9 @@
 @include _1 {
   .contact-with-us {
     gap: 40px;
-    padding: 15px;
+    padding: 0;
     margin-bottom: 90px;
-    & p {
-      text-align: center;
-    }
+
     &_title {
       display: flex;
       padding: 0;

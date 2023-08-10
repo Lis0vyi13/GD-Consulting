@@ -63,7 +63,7 @@
     }
   }
   .сonsultations {
-    margin-bottom: 90px;
+    margin: 90px 0;
     &_button {
       width: 100%;
     }
@@ -94,6 +94,6 @@
 }
 @include _1630 {
   .сonsultations {
-    margin: 300px 0 120px;
+    margin: 280px 0 120px;
   }
 }

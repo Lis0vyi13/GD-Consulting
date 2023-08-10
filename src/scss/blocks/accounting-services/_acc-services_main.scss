@@ -86,6 +86,14 @@
       letter-spacing: 0.44px;
     }
   }
+  .grid-item-wide {
+    display: flex;
+    grid-column: 1 / span 2;
+    justify-content: normal;
+    & h1 {
+      padding-bottom: 32px;
+    }
+  }
 }
 
 @include _640 {
@@ -207,9 +215,5 @@
     &__text {
       max-width: 1138px;
     }
-  }
-  .grid-item-wide {
-    grid-column: 1 / span 2;
-    justify-content: normal;
   }
 }
