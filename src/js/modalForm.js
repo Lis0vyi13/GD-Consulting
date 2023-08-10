@@ -5,7 +5,9 @@ const modalFormBlock = document.querySelector(".modal-form__block");
 const modalFormTabsBlock = document.querySelector("#modal-form__tabs");
 const modalFormTabs = document.querySelectorAll("#modal-form__tab");
 const modalFormInput = document.querySelector("#modal-form__input");
-const modalFormHiddenSelect = document.querySelector("#modal-form__hidden-select");
+const modalFormHiddenSelect = document.querySelector(
+  "#modal-form__hidden-select"
+);
 const modalFormArrow = document.querySelector("#modal-form__arrow");
 const modalForm = document.querySelector("#modal-form");
 
