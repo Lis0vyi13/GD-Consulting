@@ -1,4 +1,7 @@
 @include _1 {
+  .iframe-map {
+    position: relative;
+  }
   .contact {
     margin-top: 60px;
 
@@ -36,6 +39,7 @@
     }
     &__map {
       width: 100%;
+      position: relative;
       display: flex;
       justify-content: center;
       & iframe {
